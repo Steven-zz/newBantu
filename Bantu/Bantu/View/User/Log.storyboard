@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6P9-5k-Xkj">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Log View Controller-->
+        <scene sceneID="h1F-Cb-Utr">
+            <objects>
+                <viewController id="dht-jT-1eB" customClass="LogViewController" customModule="Bantu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IXv-GH-CmE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IcI-ak-PwY">
+                                <rect key="frame" x="16" y="579" width="343" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="d6Z-4L-mpG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
+                                <state key="normal" title="DAFTAR"/>
+                                <connections>
+                                    <action selector="registerButtonTapped:" destination="dht-jT-1eB" eventType="touchUpInside" id="65I-jH-gJq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ia4-9t-4Po">
+                                <rect key="frame" x="16" y="647" width="343" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="dVp-My-pY8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
+                                <state key="normal" title="MASUK"/>
+                                <connections>
+                                    <action selector="logInButtonTapped:" destination="dht-jT-1eB" eventType="touchUpInside" id="Bt3-8t-NEu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ia4-9t-4Po" firstAttribute="top" secondItem="IcI-ak-PwY" secondAttribute="bottom" constant="20" id="B0b-SO-qbG"/>
+                            <constraint firstItem="ede-Ag-NjX" firstAttribute="trailing" secondItem="Ia4-9t-4Po" secondAttribute="trailing" constant="16" id="NxG-pV-wtf"/>
+                            <constraint firstItem="IcI-ak-PwY" firstAttribute="leading" secondItem="ede-Ag-NjX" secondAttribute="leading" constant="16" id="PvZ-OV-bTD"/>
+                            <constraint firstItem="ede-Ag-NjX" firstAttribute="trailing" secondItem="IcI-ak-PwY" secondAttribute="trailing" constant="16" id="TKJ-8K-zz5"/>
+                            <constraint firstItem="Ia4-9t-4Po" firstAttribute="leading" secondItem="ede-Ag-NjX" secondAttribute="leading" constant="16" id="iYq-jV-SCE"/>
+                            <constraint firstItem="IcI-ak-PwY" firstAttribute="top" secondItem="ede-Ag-NjX" secondAttribute="top" constant="491" id="niR-mp-J7W"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ede-Ag-NjX"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="sf0-gW-dH9">
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="mcO-G8-ogD">
+                            <connections>
+                                <action selector="cancelButton:" destination="dht-jT-1eB" id="x5Q-Mx-bN1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="registerButton" destination="IcI-ak-PwY" id="r9a-R5-Vs3"/>
+                        <outlet property="signInButton" destination="Ia4-9t-4Po" id="lya-FJ-8hs"/>
+                        <segue destination="YQf-qf-1b7" kind="show" identifier="logToRegister" id="wTO-f4-TNo"/>
+                        <segue destination="qUm-1r-u1Y" kind="show" identifier="logToLogIn" id="g1B-Yf-oOv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rZF-X3-ugS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1202.4000000000001" y="1078.8177339901479"/>
+        </scene>
+        <!--Registering View Controller-->
+        <scene sceneID="Xid-yM-4ga">
+            <objects>
+                <viewController id="YQf-qf-1b7" customClass="RegisteringViewController" customModule="Bantu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zP1-np-9Yd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nama Lengkap" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="huL-ga-C9a" customClass="TextFieldExtension" customModule="Bantu" customModuleProvider="target">
+                                <rect key="frame" x="16" y="108" width="343" height="48"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="0LE-g5-36d"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="user"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="No Telp" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7bF-yo-pda" customClass="TextFieldExtension" customModule="Bantu" customModuleProvider="target">
+                                <rect key="frame" x="16" y="176" width="343" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="2jQ-g7-zdd"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="phone"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ulz-eO-M0f" customClass="TextFieldExtension" customModule="Bantu" customModuleProvider="target">
+                                <rect key="frame" x="16" y="244" width="343" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="QhT-ep-bDe"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="email"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Kata Sandi" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3L4-8B-U8U" customClass="TextFieldExtension" customModule="Bantu" customModuleProvider="target">
+                                <rect key="frame" x="16" y="312" width="343" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="pnc-YJ-Ppa"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="password"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Konfirmasi Kata Sandi" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uh0-2b-SLI" customClass="TextFieldExtension" customModule="Bantu" customModuleProvider="target">
+                                <rect key="frame" x="16" y="380" width="343" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="mqF-eI-JEN"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="password"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F8e-RR-Mha">
+                                <rect key="frame" x="16" y="448" width="343" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="WE3-Ex-kbj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
+                                <state key="normal" title="DAFTAR"/>
+                                <connections>
+                                    <action selector="registerButtonClicked" destination="YQf-qf-1b7" eventType="touchUpInside" id="CEn-7E-kqR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="F8e-RR-Mha" firstAttribute="leading" secondItem="ydO-NB-RGo" secondAttribute="leading" constant="16" id="1Cw-3a-CwW"/>
+                            <constraint firstItem="3L4-8B-U8U" firstAttribute="top" secondItem="ulz-eO-M0f" secondAttribute="bottom" constant="20" id="Ea8-ak-O98"/>
+                            <constraint firstItem="ydO-NB-RGo" firstAttribute="trailing" secondItem="3L4-8B-U8U" secondAttribute="trailing" constant="16" id="Ffx-G9-gYu"/>
+                            <constraint firstItem="huL-ga-C9a" firstAttribute="leading" secondItem="ydO-NB-RGo" secondAttribute="leading" constant="16" id="Gna-UP-W29"/>
+                            <constraint firstItem="ydO-NB-RGo" firstAttribute="trailing" secondItem="F8e-RR-Mha" secondAttribute="trailing" constant="16" id="I1s-57-3CB"/>
+                            <constraint firstItem="7bF-yo-pda" firstAttribute="leading" secondItem="ydO-NB-RGo" secondAttribute="leading" constant="16" id="Nuc-nx-Nk5"/>
+                            <constraint firstItem="ydO-NB-RGo" firstAttribute="trailing" secondItem="Uh0-2b-SLI" secondAttribute="trailing" constant="16" id="Qax-7w-le4"/>
+                            <constraint firstItem="F8e-RR-Mha" firstAttribute="top" secondItem="Uh0-2b-SLI" secondAttribute="bottom" constant="20" id="Rqn-Xq-kd7"/>
+                            <constraint firstItem="huL-ga-C9a" firstAttribute="top" secondItem="ydO-NB-RGo" secondAttribute="top" constant="20" id="S5p-vd-NwD"/>
+                            <constraint firstItem="3L4-8B-U8U" firstAttribute="leading" secondItem="ydO-NB-RGo" secondAttribute="leading" constant="16" id="edt-xI-mp0"/>
+                            <constraint firstItem="Uh0-2b-SLI" firstAttribute="leading" secondItem="ydO-NB-RGo" secondAttribute="leading" constant="16" id="h3E-nD-dWK"/>
+                            <constraint firstItem="7bF-yo-pda" firstAttribute="top" secondItem="huL-ga-C9a" secondAttribute="bottom" constant="20" id="kpH-Ri-Kzd"/>
+                            <constraint firstItem="ydO-NB-RGo" firstAttribute="trailing" secondItem="huL-ga-C9a" secondAttribute="trailing" constant="16" id="mO8-fj-Nxa"/>
+                            <constraint firstItem="ydO-NB-RGo" firstAttribute="trailing" secondItem="7bF-yo-pda" secondAttribute="trailing" constant="16" id="oD2-eu-tYw"/>
+                            <constraint firstItem="Uh0-2b-SLI" firstAttribute="top" secondItem="3L4-8B-U8U" secondAttribute="bottom" constant="20" id="obu-xZ-iba"/>
+                            <constraint firstItem="7bF-yo-pda" firstAttribute="top" secondItem="huL-ga-C9a" secondAttribute="bottom" constant="20" id="pgd-HS-JGB"/>
+                            <constraint firstItem="ulz-eO-M0f" firstAttribute="leading" secondItem="ydO-NB-RGo" secondAttribute="leading" constant="16" id="qgy-3Y-3xQ"/>
+                            <constraint firstItem="ulz-eO-M0f" firstAttribute="top" secondItem="7bF-yo-pda" secondAttribute="bottom" constant="20" id="tRN-9d-DWe"/>
+                            <constraint firstItem="ydO-NB-RGo" firstAttribute="trailing" secondItem="ulz-eO-M0f" secondAttribute="trailing" constant="16" id="yBW-mK-w4d"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ydO-NB-RGo"/>
+                    </view>
+                    <connections>
+                        <outlet property="confirmPasswordTextField" destination="Uh0-2b-SLI" id="Siw-Tg-qZv"/>
+                        <outlet property="emailTextField" destination="ulz-eO-M0f" id="1pS-k3-aP0"/>
+                        <outlet property="fullNameTextField" destination="huL-ga-C9a" id="7kW-jh-BSa"/>
+                        <outlet property="passwordTextField" destination="3L4-8B-U8U" id="kn4-Uz-2V0"/>
+                        <outlet property="phoneTextField" destination="7bF-yo-pda" id="cyV-bv-4K7"/>
+                        <outlet property="registerButton" destination="F8e-RR-Mha" id="wgj-Nx-7gJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7ko-nx-7LQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2012" y="1078.8177339901479"/>
+        </scene>
+        <!--Log In View Controller-->
+        <scene sceneID="wM2-eD-liF">
+            <objects>
+                <viewController id="qUm-1r-u1Y" customClass="LogInViewController" customModule="Bantu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Jf-Md-i4A">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ez2-xh-mO5" customClass="TextFieldExtension" customModule="Bantu" customModuleProvider="target">
+                                <rect key="frame" x="16" y="108" width="343" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="Bih-96-WqQ"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="email"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Kata Sandi" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q5E-ZT-kjZ" customClass="TextFieldExtension" customModule="Bantu" customModuleProvider="target">
+                                <rect key="frame" x="16" y="176" width="343" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="eBe-rh-QPg"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="password"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wmD-zv-ZO4">
+                                <rect key="frame" x="16" y="244" width="343" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="1cI-7p-QdM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
+                                <state key="normal" title="MASUK"/>
+                                <connections>
+                                    <action selector="logInButtonClicked" destination="qUm-1r-u1Y" eventType="touchUpInside" id="XYi-sP-8s4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ez2-xh-mO5" firstAttribute="top" secondItem="EbR-oX-Es7" secondAttribute="top" constant="20" id="3Mb-nk-4tS"/>
+                            <constraint firstItem="wmD-zv-ZO4" firstAttribute="leading" secondItem="EbR-oX-Es7" secondAttribute="leading" constant="16" id="AQm-So-0Nr"/>
+                            <constraint firstItem="EbR-oX-Es7" firstAttribute="trailing" secondItem="wmD-zv-ZO4" secondAttribute="trailing" constant="16" id="NT8-c3-EKV"/>
+                            <constraint firstItem="ez2-xh-mO5" firstAttribute="leading" secondItem="EbR-oX-Es7" secondAttribute="leading" constant="16" id="NnO-YU-keW"/>
+                            <constraint firstItem="EbR-oX-Es7" firstAttribute="trailing" secondItem="Q5E-ZT-kjZ" secondAttribute="trailing" constant="16" id="Urs-6g-4Ng"/>
+                            <constraint firstItem="EbR-oX-Es7" firstAttribute="trailing" secondItem="ez2-xh-mO5" secondAttribute="trailing" constant="16" id="aMY-1N-Ypi"/>
+                            <constraint firstItem="wmD-zv-ZO4" firstAttribute="top" secondItem="Q5E-ZT-kjZ" secondAttribute="bottom" constant="20" id="fjp-hN-6Z1"/>
+                            <constraint firstItem="Q5E-ZT-kjZ" firstAttribute="leading" secondItem="EbR-oX-Es7" secondAttribute="leading" constant="16" id="i1c-QQ-Pnz"/>
+                            <constraint firstItem="Q5E-ZT-kjZ" firstAttribute="top" secondItem="ez2-xh-mO5" secondAttribute="bottom" constant="20" id="uLA-PB-jMN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EbR-oX-Es7"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="ez2-xh-mO5" id="0tK-hj-De6"/>
+                        <outlet property="logInButton" destination="wmD-zv-ZO4" id="eeN-75-7ZQ"/>
+                        <outlet property="passwordTextField" destination="Q5E-ZT-kjZ" id="mGL-p7-2E6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="52t-o4-3lU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1202" y="1844"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kDE-do-M8k">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6P9-5k-Xkj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3QB-am-ICb">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dht-jT-1eB" kind="relationship" relationship="rootViewController" id="lYN-71-vj1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2jF-XA-Zvr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="260" y="1078.8177339901479"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="email" width="18.75" height="18.75"/>
+        <image name="password" width="18.75" height="18.75"/>
+        <image name="phone" width="18.75" height="18.75"/>
+        <image name="user" width="18.75" height="18.75"/>
+    </resources>
+</document>
