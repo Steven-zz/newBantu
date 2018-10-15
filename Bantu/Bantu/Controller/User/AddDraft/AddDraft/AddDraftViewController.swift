@@ -59,9 +59,13 @@ class AddDraftViewController: UIViewController {
     //MARK: Array Declaration
     var needs: [Needs] = [
         Needs(needsId: 1, needsName: "Air"),
-        Needs(needsId: 2, needsName: "Buku")
+        Needs(needsId: 2, needsName: "Buku"),
+        Needs(needsId: 3, needsName: "Seragam"),
+        Needs(needsId: 4, needsName: "Alat Tulis"),
+        Needs(needsId: 5, needsName: "Al-quran")
     ]
     var selectedNeeds: [Bool] = []
+    var selectedIndex: Int = 0
 
     
     override func viewDidLoad() {
@@ -224,7 +228,11 @@ extension AddDraftViewController: UICollectionViewDataSource, UICollectionViewDe
         if (collectionView == self.needCollectionView) {
             let cell = self.needCollectionView.dequeueReusableCell(withReuseIdentifier: "needCell", for: indexPath) as! NeedCollectionCell
             cell.myNeedsLabel.text = self.needs[indexPath.row].needsName
-            cell.myNeedsLabel.backgroundColor = UIColor.gray
+            cell.myNeedsLabel.backgroundColor = UIColor.lightGray
+            cell.myNeedsLabel.layer.borderColor = UIColor.black.cgColor
+            cell.myNeedsLabel.layer.borderWidth = 1
+            cell.myNeedsLabel.layer.cornerRadius = 3
+            
             return cell
         }
         else if (collectionView == self.schoolCollectionView) {
@@ -237,6 +245,7 @@ extension AddDraftViewController: UICollectionViewDataSource, UICollectionViewDe
         cell.setImage(image: self.currentDraft.roadImages[indexPath.row])
         return cell
     }
+    
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -252,6 +261,15 @@ extension AddDraftViewController: UICollectionViewDataSource, UICollectionViewDe
             print("Road View")
             return self.currentDraft.roadImages.count
         }
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if (collectionView == self.needCollectionView) {
+            selectedIndex = indexPath.item
+            print("Selected Index = \(selectedIndex)")
+        }
+
     }
     
     
@@ -272,7 +290,15 @@ extension AddDraftViewController: UICollectionViewDataSource, UICollectionViewDe
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.needCollectionView.frame.width/3-10, height: 30)
+        if (collectionView == self.needCollectionView) {
+            return CGSize(width: self.needCollectionView.frame.width/4-10, height: 20)
+        }
+        else if (collectionView == self.schoolCollectionView) {
+            return CGSize(width: 65, height: 65)
+        }
+        else {
+            return CGSize(width: 65, height: 65)
+        }
     }
     
 }
