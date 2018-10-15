@@ -13,6 +13,7 @@ import MapKit
 
 class AddDraftViewController: UIViewController {
     
+    
     //MARK: Outlet for textview & textfield
     @IBOutlet weak var schoolNameTextField: UITextField!
     @IBOutlet weak var aboutTextField: UITextView!
@@ -28,16 +29,19 @@ class AddDraftViewController: UIViewController {
     @IBOutlet weak var schoolCollectionView: UICollectionView!
     @IBOutlet weak var roadCollectionView: UICollectionView!
     
+    
     //MARK: Outlet for mapKit
     @IBOutlet weak var myMapView: MKMapView!
     
     
-    //MARK: Variable Declaration
-    var isNewDraft: Bool!
+    //MARK: Outlet for scrollview
+    @IBOutlet weak var scrollView: UIScrollView!
     
+    
+    //MARK: Variable Declaration
     var currentDraft = Post(postId: 0, userId: 0, statusId: 0, timeStamp: "", schoolName: "", about: "", studentNo: 0, teacherNo: 0, address: "", access: "", notes: "", locationAOI: "", locationName: "", locationLocality: "", locationAdminArea: "", locationLatitude: 0, locationLongitude: 0, schoolImages: [], roadImages: [], needs: [])
     
-    
+    var isNewDraft: Bool!
     var isPickingSchool: Bool = false
     var isPickingRoad: Bool = false
     var isCurrentlyEditing: Bool = false
@@ -52,12 +56,20 @@ class AddDraftViewController: UIViewController {
     var tempLocAdminArea: String = ""
     
     
+    //MARK: Array Declaration
+    var needs: [Needs] = [
+        Needs(needsId: 1, needsName: "Air"),
+        Needs(needsId: 2, needsName: "Buku")
+    ]
+    var selectedNeeds: [Bool] = []
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(saveButtonTapped))
-        
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelButtonTapped))
+        
     }
     
     
@@ -79,6 +91,11 @@ class AddDraftViewController: UIViewController {
         
         self.isNewDraft = false
         self.saveNewDraftToCoreData()
+    }
+    
+    
+    @IBAction func hideKeyboard(_ sender: Any) {
+        scrollView.endEditing(true)
     }
     
     
@@ -105,6 +122,7 @@ class AddDraftViewController: UIViewController {
         imagePicker.sourceType = .photoLibrary
         self.present(imagePicker, animated: true, completion: nil)
     }
+    
     
     //MARK: Save to Core Data
     func saveNewDraftToCoreData() {
@@ -184,6 +202,7 @@ class AddDraftViewController: UIViewController {
     
     //MARK: Map Configuration
     func setUpMap() {
+        self.locationManager.delegate = self
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
         self.locationManager.requestWhenInUseAuthorization()
         self.locationManager.startUpdatingLocation()
@@ -198,10 +217,16 @@ class AddDraftViewController: UIViewController {
 
 
 //MARK: Extension for collectionview
-extension AddDraftViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+extension AddDraftViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if (collectionView == self.schoolCollectionView) {
+        if (collectionView == self.needCollectionView) {
+            let cell = self.needCollectionView.dequeueReusableCell(withReuseIdentifier: "needCell", for: indexPath) as! NeedCollectionCell
+            cell.myNeedsLabel.text = self.needs[indexPath.row].needsName
+            return cell
+        }
+        else if (collectionView == self.schoolCollectionView) {
             let cell = self.schoolCollectionView.dequeueReusableCell(withReuseIdentifier: "schoolCell", for: indexPath) as! ImageCollectionCell
             cell.setImage(image: self.currentDraft.schoolImages[indexPath.row])
             return cell
@@ -214,7 +239,11 @@ extension AddDraftViewController: UICollectionViewDataSource, UICollectionViewDe
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if (collectionView == self.schoolCollectionView) {
+        if (collectionView == self.needCollectionView) {
+            print("Needs View")
+            return self.needs.count
+        }
+        else if (collectionView == self.schoolCollectionView) {
             print("School View")
             return self.currentDraft.schoolImages.count
         }
@@ -223,21 +252,27 @@ extension AddDraftViewController: UICollectionViewDataSource, UICollectionViewDe
             return self.currentDraft.roadImages.count
         }
     }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
-        func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-            
-            var footerIdentifier: String = ""
-            
-            if (collectionView == self.schoolCollectionView) {
-                footerIdentifier = "schoolFooter"
-            }
-            else if (collectionView == self.roadCollectionView) {
-                footerIdentifier = "roadFooter"
-            }
-            
-            let footerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: footerIdentifier, for: indexPath)
-            return footerView
+        var footerIdentifier: String = ""
+        
+        if (collectionView == self.schoolCollectionView) {
+            footerIdentifier = "schoolFooter"
         }
+        else if (collectionView == self.roadCollectionView) {
+            footerIdentifier = "roadFooter"
+        }
+        
+        let footerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: footerIdentifier, for: indexPath)
+        return footerView
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: self.needCollectionView.frame.width/3-10, height: 30)
+    }
     
 }
 
@@ -325,3 +360,4 @@ extension AddDraftViewController: CLLocationManagerDelegate {
         self.myMapView.showsUserLocation = true
     }
 }
+
