@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1100"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6yD-Ma-zJO">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="6yD-Ma-zJO">
                                 <rect key="frame" x="0.0" y="88" width="375" height="929"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Asw-sJ-kDs">
@@ -302,9 +302,13 @@
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1100" id="NEs-jx-gen"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="km8-NX-lFi" appends="YES" id="0jZ-DF-cZv"/>
+                                        </connections>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -338,11 +342,17 @@
                         <outlet property="roadCollectionView" destination="3TQ-Zz-7nV" id="NuN-DC-KJC"/>
                         <outlet property="schoolCollectionView" destination="Chm-kK-5qB" id="N0a-0t-7xW"/>
                         <outlet property="schoolNameTextField" destination="e5M-bb-LO6" id="bOJ-l4-ibW"/>
+                        <outlet property="scrollView" destination="6yD-Ma-zJO" id="z8i-lT-Hk6"/>
                         <outlet property="studentNoTextField" destination="tbg-Fr-jnV" id="y5X-jH-OyX"/>
                         <outlet property="teacherNo" destination="NYE-zG-0vC" id="aSj-Vd-QpX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bsp-Cn-MpU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="km8-NX-lFi">
+                    <connections>
+                        <action selector="hideKeyboard:" destination="kmj-Hu-fei" id="9uh-kV-Bkg"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="4050.4000000000001" y="150.73891625615764"/>
         </scene>
