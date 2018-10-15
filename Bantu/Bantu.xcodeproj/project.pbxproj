@@ -10,6 +10,12 @@
 		12BFBB2AF36CBED769B59D04 /* Pods_Bantu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B288977528F21EE08472445 /* Pods_Bantu.framework */; };
 		296BE554216F5CD7006A6B88 /* LocalModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 296BE552216F5CD7006A6B88 /* LocalModel.xcdatamodeld */; };
 		296BE57E216F60E0006A6B88 /* LocalServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296BE57D216F60E0006A6B88 /* LocalServices.swift */; };
+		29D1CD6E21747B7000282B5A /* DraftEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D1CD6A21747B7000282B5A /* DraftEntity+CoreDataClass.swift */; };
+		29D1CD6F21747B7000282B5A /* DraftEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D1CD6B21747B7000282B5A /* DraftEntity+CoreDataProperties.swift */; };
+		29D1CD7021747B7000282B5A /* NeedsEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D1CD6C21747B7000282B5A /* NeedsEntity+CoreDataClass.swift */; };
+		29D1CD7121747B7000282B5A /* NeedsEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D1CD6D21747B7000282B5A /* NeedsEntity+CoreDataProperties.swift */; };
+		29D1CD7321747E9E00282B5A /* ImageCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D1CD7221747E9E00282B5A /* ImageCollectionCell.swift */; };
+		29D1CD752174820600282B5A /* NeedCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D1CD742174820600282B5A /* NeedCollectionCell.swift */; };
 		2F6B620A216F639900BDC9A7 /* DefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6B6209216F639900BDC9A7 /* DefaultViewController.swift */; };
 		2F6FC31F21660912004609AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6FC31E21660912004609AC /* AppDelegate.swift */; };
 		2F6FC32421660913004609AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F6FC32221660913004609AC /* Main.storyboard */; };
@@ -46,11 +52,7 @@
 		8529E00F216F005500879A98 /* SHA1Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8529E00E216F005500879A98 /* SHA1Extension.swift */; };
 		8529E011216F4A9C00879A98 /* PostServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8529E010216F4A9C00879A98 /* PostServices.swift */; };
 		8529E013216F4B3F00879A98 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8529E012216F4B3F00879A98 /* Post.swift */; };
-		853D1C54217058030071A60E /* DraftEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853D1C50217058030071A60E /* DraftEntity+CoreDataClass.swift */; };
-		853D1C55217058030071A60E /* DraftEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853D1C51217058030071A60E /* DraftEntity+CoreDataProperties.swift */; };
 		853D1C57217059550071A60E /* Needs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853D1C56217059550071A60E /* Needs.swift */; };
-		853D1C5A217059C30071A60E /* NeedsEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853D1C58217059C30071A60E /* NeedsEntity+CoreDataClass.swift */; };
-		853D1C5B217059C30071A60E /* NeedsEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853D1C59217059C30071A60E /* NeedsEntity+CoreDataProperties.swift */; };
 		853D1C5D21705D990071A60E /* NeedsServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853D1C5C21705D990071A60E /* NeedsServices.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +60,12 @@
 		1FB46D47F0CFC412CC1ED78B /* Pods-Bantu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bantu.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bantu/Pods-Bantu.release.xcconfig"; sourceTree = "<group>"; };
 		296BE553216F5CD7006A6B88 /* LocalModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LocalModel.xcdatamodel; sourceTree = "<group>"; };
 		296BE57D216F60E0006A6B88 /* LocalServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalServices.swift; sourceTree = "<group>"; };
+		29D1CD6A21747B7000282B5A /* DraftEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DraftEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		29D1CD6B21747B7000282B5A /* DraftEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DraftEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		29D1CD6C21747B7000282B5A /* NeedsEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NeedsEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		29D1CD6D21747B7000282B5A /* NeedsEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NeedsEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		29D1CD7221747E9E00282B5A /* ImageCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionCell.swift; sourceTree = "<group>"; };
+		29D1CD742174820600282B5A /* NeedCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeedCollectionCell.swift; sourceTree = "<group>"; };
 		2F6B6209216F639900BDC9A7 /* DefaultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultViewController.swift; sourceTree = "<group>"; };
 		2F6FC31B21660912004609AC /* Bantu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bantu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F6FC31E21660912004609AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -97,11 +105,7 @@
 		8529E00E216F005500879A98 /* SHA1Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHA1Extension.swift; sourceTree = "<group>"; };
 		8529E010216F4A9C00879A98 /* PostServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostServices.swift; sourceTree = "<group>"; };
 		8529E012216F4B3F00879A98 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
-		853D1C50217058030071A60E /* DraftEntity+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DraftEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
-		853D1C51217058030071A60E /* DraftEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DraftEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		853D1C56217059550071A60E /* Needs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Needs.swift; sourceTree = "<group>"; };
-		853D1C58217059C30071A60E /* NeedsEntity+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NeedsEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
-		853D1C59217059C30071A60E /* NeedsEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NeedsEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		853D1C5C21705D990071A60E /* NeedsServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeedsServices.swift; sourceTree = "<group>"; };
 		96FB6FFF3BDE33ED7269DF4B /* Pods-Bantu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bantu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bantu/Pods-Bantu.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,10 +126,10 @@
 		296BE551216F5CB0006A6B88 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				853D1C58217059C30071A60E /* NeedsEntity+CoreDataClass.swift */,
-				853D1C59217059C30071A60E /* NeedsEntity+CoreDataProperties.swift */,
-				853D1C50217058030071A60E /* DraftEntity+CoreDataClass.swift */,
-				853D1C51217058030071A60E /* DraftEntity+CoreDataProperties.swift */,
+				29D1CD6A21747B7000282B5A /* DraftEntity+CoreDataClass.swift */,
+				29D1CD6B21747B7000282B5A /* DraftEntity+CoreDataProperties.swift */,
+				29D1CD6C21747B7000282B5A /* NeedsEntity+CoreDataClass.swift */,
+				29D1CD6D21747B7000282B5A /* NeedsEntity+CoreDataProperties.swift */,
 				296BE552216F5CD7006A6B88 /* LocalModel.xcdatamodeld */,
 				296BE57D216F60E0006A6B88 /* LocalServices.swift */,
 			);
@@ -227,6 +231,8 @@
 				8529E012216F4B3F00879A98 /* Post.swift */,
 				853D1C56217059550071A60E /* Needs.swift */,
 				2F719D99217091E0009C83A4 /* NeedSubmissionCell.swift */,
+				29D1CD7221747E9E00282B5A /* ImageCollectionCell.swift */,
+				29D1CD742174820600282B5A /* NeedCollectionCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -430,9 +436,9 @@
 				8529E00B216EFD3700879A98 /* UserServices.swift in Sources */,
 				2FA5E338216DA01400EB375C /* AddDraftViewController.swift in Sources */,
 				2F719D9821708D61009C83A4 /* SubmissionViewController.swift in Sources */,
-				853D1C5B217059C30071A60E /* NeedsEntity+CoreDataProperties.swift in Sources */,
 				2FA5E344216DD83100EB375C /* UITextField.swift in Sources */,
 				296BE554216F5CD7006A6B88 /* LocalModel.xcdatamodeld in Sources */,
+				29D1CD6F21747B7000282B5A /* DraftEntity+CoreDataProperties.swift in Sources */,
 				296BE57E216F60E0006A6B88 /* LocalServices.swift in Sources */,
 				8529E008216EFC0B00879A98 /* GlobalModel.swift in Sources */,
 				2F6FC31F21660912004609AC /* AppDelegate.swift in Sources */,
@@ -440,12 +446,13 @@
 				2FA5E342216DCA0D00EB375C /* LogViewController.swift in Sources */,
 				2F719DA52170A249009C83A4 /* AddEventViewController.swift in Sources */,
 				8529E00D216EFEC600879A98 /* User.swift in Sources */,
+				29D1CD6E21747B7000282B5A /* DraftEntity+CoreDataClass.swift in Sources */,
+				29D1CD752174820600282B5A /* NeedCollectionCell.swift in Sources */,
 				8529E011216F4A9C00879A98 /* PostServices.swift in Sources */,
+				29D1CD7321747E9E00282B5A /* ImageCollectionCell.swift in Sources */,
 				2F719D9C21709E73009C83A4 /* SubmissionDetailViewController.swift in Sources */,
-				853D1C54217058030071A60E /* DraftEntity+CoreDataClass.swift in Sources */,
 				2FA1BA2D216DFE1700528619 /* DraftCell.swift in Sources */,
 				2FE953CC216B45CA00258F32 /* HomeCell.swift in Sources */,
-				853D1C5A217059C30071A60E /* NeedsEntity+CoreDataClass.swift in Sources */,
 				853D1C5D21705D990071A60E /* NeedsServices.swift in Sources */,
 				2FA1BA29216DFD7900528619 /* DraftViewController.swift in Sources */,
 				2FA5E331216D9D2200EB375C /* UIButton.swift in Sources */,
@@ -456,8 +463,9 @@
 				2F719D9A217091E0009C83A4 /* NeedSubmissionCell.swift in Sources */,
 				853D1C57217059550071A60E /* Needs.swift in Sources */,
 				2FE953C9216B377800258F32 /* HomeViewController.swift in Sources */,
+				29D1CD7021747B7000282B5A /* NeedsEntity+CoreDataClass.swift in Sources */,
 				2FE953CE216B46B400258F32 /* Event.swift in Sources */,
-				853D1C55217058030071A60E /* DraftEntity+CoreDataProperties.swift in Sources */,
+				29D1CD7121747B7000282B5A /* NeedsEntity+CoreDataProperties.swift in Sources */,
 				2F6B620A216F639900BDC9A7 /* DefaultViewController.swift in Sources */,
 				2FA5E346216DDCDC00EB375C /* RegisteringViewController.swift in Sources */,
 				2F719DA32170A224009C83A4 /* EventDetailViewController.swift in Sources */,

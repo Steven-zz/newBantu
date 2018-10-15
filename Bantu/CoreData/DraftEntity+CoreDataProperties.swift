@@ -1,8 +1,9 @@
 //
 //  DraftEntity+CoreDataProperties.swift
-//  
+//  Bantu
 //
-//  Created by Steven Muliamin on 12/10/18.
+//  Created by Gior Fasolini on 15/10/18.
+//  Copyright © 2018 Resky Javieri. All rights reserved.
 //
 //
 
@@ -32,5 +33,7 @@ extension DraftEntity {
     @NSManaged public var schoolImages: NSData?
     @NSManaged public var schoolName: String?
     @NSManaged public var timeStamp: NSDate?
+    @NSManaged public var studentNo: Int64
+    @NSManaged public var teacherNo: Int64
 
 }

@@ -97,7 +97,7 @@
         <!--Add Draft-->
         <scene sceneID="zAJ-zV-aHR">
             <objects>
-                <viewController id="uCC-ji-G4h" customClass="AddDraftViewController" customModule="Bantu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="uCC-ji-G4h" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kBb-YB-jcg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1100"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

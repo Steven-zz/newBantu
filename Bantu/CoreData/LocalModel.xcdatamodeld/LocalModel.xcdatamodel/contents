@@ -16,6 +16,8 @@
         <attribute name="roadImages" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="schoolImages" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="schoolName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="studentNo" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="teacherNo" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="timeStamp" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
     </entity>
     <entity name="NeedsEntity" representedClassName="NeedsEntity" syncable="YES">
@@ -23,7 +25,7 @@
         <attribute name="needsName" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="DraftEntity" positionX="-36" positionY="9" width="128" height="285"/>
+        <element name="DraftEntity" positionX="-36" positionY="9" width="128" height="315"/>
         <element name="NeedsEntity" positionX="-36" positionY="126" width="128" height="75"/>
     </elements>
 </model>
