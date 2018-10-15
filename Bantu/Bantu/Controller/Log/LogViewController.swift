@@ -26,6 +26,7 @@ class LogViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         if (GlobalSession.isLoggedIn == true){
             // go to profile page
+            
         }
     }
     

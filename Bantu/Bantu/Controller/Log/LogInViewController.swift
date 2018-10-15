@@ -49,15 +49,10 @@ class LogInViewController: UIViewController {
                         if (singleUser.password == hashedPassword){
                             DispatchQueue.main.async {
                                 self.createOkAlert(title: "Berhasil", message: "Anda telah masuk!"){
-                                    if (singleUser.levelId == 2){
-                                        // to profile page
-                                        GlobalSession.isLoggedIn = true
-                                        GlobalSession.loggedInUser = singleUser
-                                        self.navigationController?.popViewController(animated: true)
-                                    }
-                                    else{
-                                        // segue to admin storyboard reference
-                                    }
+                                    // to profile page
+                                    GlobalSession.isLoggedIn = true
+                                    GlobalSession.loggedInUser = singleUser
+                                self.navigationController?.popViewController(animated: true)
                                 }
                             }
                         }
