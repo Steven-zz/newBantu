@@ -267,11 +267,19 @@ extension AddDraftViewController: UICollectionViewDataSource, UICollectionViewDe
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if (collectionView == self.needCollectionView) {
             selectedIndex = indexPath.item
-            print("Selected Index = \(selectedIndex)")
+            print(selectedIndex)
         }
-
     }
-    
+//
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        print("Keteken")
+//        if (collectionView == self.needCollectionView) {
+//            selectedIndex = indexPath.item
+//            print("Selected Index = \(selectedIndex)")
+//        }
+//
+//    }
+//
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         

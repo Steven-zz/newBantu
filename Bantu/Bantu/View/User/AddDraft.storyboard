@@ -226,8 +226,8 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="65" height="20"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N2A-v4-Gry">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="65" height="19"/>
+                                                                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N2A-v4-Gry">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="65" height="20"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -323,6 +323,9 @@
                                     <constraint firstItem="Asw-sJ-kDs" firstAttribute="leading" secondItem="6yD-Ma-zJO" secondAttribute="leading" id="qcI-Ic-ic6"/>
                                     <constraint firstAttribute="trailing" secondItem="Asw-sJ-kDs" secondAttribute="trailing" id="xZg-Se-ROk"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="kmj-Hu-fei" id="TEl-fr-GgD"/>
+                                </connections>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
