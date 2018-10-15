@@ -224,6 +224,7 @@ extension AddDraftViewController: UICollectionViewDataSource, UICollectionViewDe
         if (collectionView == self.needCollectionView) {
             let cell = self.needCollectionView.dequeueReusableCell(withReuseIdentifier: "needCell", for: indexPath) as! NeedCollectionCell
             cell.myNeedsLabel.text = self.needs[indexPath.row].needsName
+            cell.myNeedsLabel.backgroundColor = UIColor.gray
             return cell
         }
         else if (collectionView == self.schoolCollectionView) {
