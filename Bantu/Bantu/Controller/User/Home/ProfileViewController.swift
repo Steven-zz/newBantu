@@ -32,13 +32,7 @@ class ProfileViewController: UITableViewController {
         }
         else{
             if (GlobalSession.loggedInUser.levelId == 1){
-                if (GlobalSession.initialLogin == true){
-                    GlobalSession.initialLogin = false
-                    PostServices.getPosts(){ (posts) in
-                        GlobalSession.submissions = posts
-                        self.performSegue(withIdentifier: "profileToAdmin", sender: self)
-                    }
-                }
+                performSegue(withIdentifier: "profileToAdmin", sender: self)
             }
             else{
                 if (GlobalSession.initialLogin == true){
