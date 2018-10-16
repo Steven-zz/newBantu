@@ -31,7 +31,7 @@ class postCell: UITableViewCell {
         self.schoolNameLabel.text = self.currentPost.schoolName
         self.locationLabel.text = "\(self.currentPost.locationLocality), \(self.currentPost.locationAdminArea)"
         self.fullNameLabel.text = self.currentPost.fullName
-        self.timeStampLabel.text = self.currentPost.timeStamp
+        self.timeStampLabel.text = self.currentPost.timeStamp.beautifyDate()
         
         
         self.needsCollectionView.reloadData()
