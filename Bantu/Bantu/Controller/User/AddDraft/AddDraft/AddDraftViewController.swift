@@ -64,11 +64,17 @@ class AddDraftViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.schoolNameTextField.setIndentLeftPadding()
+        self.aboutTextField.setIndentTextView()
+        
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(saveButtonTapped))
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelButtonTapped))
         
         self.fetchAllNeedsFromCoreData()
     }
+    
+    
+   
     
     
     func setInitialNeedsParallelArray(){
@@ -442,3 +448,10 @@ extension AddDraftViewController: CLLocationManagerDelegate {
     }
 }
 
+
+
+//MARK: Extension for UITextView
+extension AddDraftViewController: UITextViewDelegate {
+    
+    
+}

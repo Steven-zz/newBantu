@@ -13,6 +13,7 @@
 		2989080A217596740019AF1B /* DraftEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29890808217596740019AF1B /* DraftEntity+CoreDataClass.swift */; };
 		2989080B217596740019AF1B /* DraftEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29890809217596740019AF1B /* DraftEntity+CoreDataProperties.swift */; };
 		29A008F62175DD6E00F71413 /* DraftDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A008F52175DD6E00F71413 /* DraftDetailViewController.swift */; };
+		29A008F8217621EE00F71413 /* PaddingTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A008F7217621EE00F71413 /* PaddingTextView.swift */; };
 		29D1CD7021747B7000282B5A /* NeedsEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D1CD6C21747B7000282B5A /* NeedsEntity+CoreDataClass.swift */; };
 		29D1CD7121747B7000282B5A /* NeedsEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D1CD6D21747B7000282B5A /* NeedsEntity+CoreDataProperties.swift */; };
 		29D1CD7321747E9E00282B5A /* ImageCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D1CD7221747E9E00282B5A /* ImageCollectionCell.swift */; };
@@ -69,6 +70,7 @@
 		29890808217596740019AF1B /* DraftEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DraftEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		29890809217596740019AF1B /* DraftEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DraftEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		29A008F52175DD6E00F71413 /* DraftDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraftDetailViewController.swift; sourceTree = "<group>"; };
+		29A008F7217621EE00F71413 /* PaddingTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingTextView.swift; sourceTree = "<group>"; };
 		29D1CD6C21747B7000282B5A /* NeedsEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NeedsEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		29D1CD6D21747B7000282B5A /* NeedsEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NeedsEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		29D1CD7221747E9E00282B5A /* ImageCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionCell.swift; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				2FA5E32C216B61B600EB375C /* PaddingTextField.swift */,
+				29A008F7217621EE00F71413 /* PaddingTextView.swift */,
 				2FA5E330216D9D2200EB375C /* UIButton.swift */,
 				2FA5E343216DD83100EB375C /* UITextField.swift */,
 				8529E00E216F005500879A98 /* SHA1Extension.swift */,
@@ -482,6 +485,7 @@
 				85EAB4172175EC0800F0F6FD /* UserSubmissionViewController.swift in Sources */,
 				85EAB4152175DA0A00F0F6FD /* needsCell.swift in Sources */,
 				2FA5E348216DE0C800EB375C /* LogInViewController.swift in Sources */,
+				29A008F8217621EE00F71413 /* PaddingTextView.swift in Sources */,
 				2F719D9A217091E0009C83A4 /* NeedSubmissionCell.swift in Sources */,
 				853D1C57217059550071A60E /* Needs.swift in Sources */,
 				2FBA047D2175C98F00C54860 /* ProfileViewController.swift in Sources */,
