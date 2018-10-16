@@ -46,12 +46,28 @@ struct PostServices {
                             let locationAdminArea = singlePost["locationAdminArea"] as! String
                             let locationLatitude = singlePost["locationLatitude"] as! Double
                             let locationLongitude = singlePost["locationLongitude"] as! Double
+                            let fullName = singlePost["schoolName"] as! String
                             
-                            var schoolImages: [UIImage]
-                            var roadImages: [UIImage]
-                            var needs: [Needs]
+                            var tempNeeds: [Needs] = []
+                            let needsJSON: [[String:Any]] = singlePost["needs"] as! [[String:Any]]
+                            for singleNeeds in needsJSON{
+                                let needsId = singleNeeds["needsId"] as! Int
+                                let needsName = singleNeeds["needsName"] as! String
+                                let newNeeds = Needs(needsId: needsId, needsName: needsName)
+                                tempNeeds.append(newNeeds)
+                            }
+                            
+                            let schoolUrls: [String] = singlePost["schoolImages"] as! [String]
+                            let roadUrls: [String] = singlePost["roadImages"] as! [String]
                             
                             
+                            
+                            var schoolImages: [UIImage] = []
+                            var roadImages: [UIImage] = []
+                            
+                            let newPost = Post(postId: postId, userId: userId, statusId: statusId, timeStamp: timeStamp, schoolName: schoolName, about: about, studentNo: studentNo, teacherNo: teacherNo, address: address, access: access, notes: notes, locationAOI: locationAOI, locationName: locationName, locationLocality: locationLocality, locationAdminArea: locationAdminArea, locationLatitude: locationLatitude, locationLongitude: locationLongitude, fullName: fullName, schoolImages: schoolImages, roadImages: roadImages, needs: tempNeeds)
+                            
+                            tempPosts.append(newPost)
                         }
                         onComplete(tempPosts)
                     }
