@@ -16,13 +16,19 @@ class UserSubmissionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.getSubmissions()
     }
     
     func getSubmissions(){
         PostServices.getPostsByUser(){ (submissions) in
             self.submissions = submissions
+            DispatchQueue.main.async {
+                self.userSubmissionTableView.reloadData()
+            }
         }
     }
 
