@@ -103,6 +103,8 @@ class AddDraftViewController: UIViewController {
         
         self.isNewDraft = false
         self.saveNewDraftToCoreData()
+        
+        self.dismiss(animated: true, completion: nil)
     }
     
     
@@ -222,7 +224,7 @@ class AddDraftViewController: UIViewController {
         // Saving timestamp to core data
         let currDate = Date()
         let formatter = DateFormatter()
-        formatter.dateFormat = "dd-mm-yyyy"
+        formatter.dateFormat = "dd-MM-yyyy"
         let dateString = formatter.string(from: currDate)
 
         print(dateString)
