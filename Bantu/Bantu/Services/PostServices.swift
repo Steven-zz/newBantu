@@ -62,6 +62,8 @@ struct PostServices {
                             
                             
                             
+                            
+                            
                             var schoolImages: [UIImage] = []
                             var roadImages: [UIImage] = []
                             
