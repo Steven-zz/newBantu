@@ -655,10 +655,10 @@ meter sampai ketemu pos satpam.</string>
             </objects>
             <point key="canvasLocation" x="3868" y="1063.3004926108374"/>
         </scene>
-        <!--Event Detail View Controller-->
+        <!--View Controller-->
         <scene sceneID="dp0-Fq-esw">
             <objects>
-                <viewController id="soy-Kq-rbL" customClass="EventDetailViewController" customModule="Bantu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="soy-Kq-rbL" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="K9u-Wc-MEW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -805,7 +805,6 @@ meter sampai ketemu pos satpam.</string>
         <!--Submission-->
         <scene sceneID="zPg-I7-54T">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Q6n-AB-q3x" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NNJ-6r-iMp" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Submission" id="pmo-TG-Fcz"/>
                     <toolbarItems/>
@@ -818,6 +817,7 @@ meter sampai ketemu pos satpam.</string>
                         <segue destination="Jrr-hC-bpI" kind="relationship" relationship="rootViewController" id="IOK-PN-uoG"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q6n-AB-q3x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2904.8000000000002" y="34.729064039408868"/>
         </scene>

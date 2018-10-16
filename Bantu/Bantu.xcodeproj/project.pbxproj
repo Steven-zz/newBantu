@@ -30,7 +30,7 @@
 		2F719D9A217091E0009C83A4 /* NeedSubmissionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F719D99217091E0009C83A4 /* NeedSubmissionCell.swift */; };
 		2F719D9C21709E73009C83A4 /* SubmissionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F719D9B21709E73009C83A4 /* SubmissionDetailViewController.swift */; };
 		2F719DA12170A215009C83A4 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F719DA02170A215009C83A4 /* EventViewController.swift */; };
-		2F719DA32170A224009C83A4 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F719DA22170A224009C83A4 /* EventDetailViewController.swift */; };
+		2F719DA32170A224009C83A4 /* UserSubmissionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F719DA22170A224009C83A4 /* UserSubmissionDetailViewController.swift */; };
 		2F719DA52170A249009C83A4 /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F719DA42170A249009C83A4 /* AddEventViewController.swift */; };
 		2FA1BA29216DFD7900528619 /* DraftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA1BA28216DFD7900528619 /* DraftViewController.swift */; };
 		2FA1BA2D216DFE1700528619 /* DraftCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA1BA2C216DFE1700528619 /* DraftCell.swift */; };
@@ -91,7 +91,7 @@
 		2F719D99217091E0009C83A4 /* NeedSubmissionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeedSubmissionCell.swift; sourceTree = "<group>"; };
 		2F719D9B21709E73009C83A4 /* SubmissionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmissionDetailViewController.swift; sourceTree = "<group>"; };
 		2F719DA02170A215009C83A4 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
-		2F719DA22170A224009C83A4 /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
+		2F719DA22170A224009C83A4 /* UserSubmissionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSubmissionDetailViewController.swift; sourceTree = "<group>"; };
 		2F719DA42170A249009C83A4 /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
 		2FA1BA28216DFD7900528619 /* DraftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraftViewController.swift; sourceTree = "<group>"; };
 		2FA1BA2C216DFE1700528619 /* DraftCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraftCell.swift; sourceTree = "<group>"; };
@@ -212,7 +212,6 @@
 			isa = PBXGroup;
 			children = (
 				2F719DA02170A215009C83A4 /* EventViewController.swift */,
-				2F719DA22170A224009C83A4 /* EventDetailViewController.swift */,
 				2F719DA42170A249009C83A4 /* AddEventViewController.swift */,
 			);
 			path = Event;
@@ -319,6 +318,7 @@
 				2FA5E345216DDCDC00EB375C /* RegisteringViewController.swift */,
 				2FA5E347216DE0C800EB375C /* LogInViewController.swift */,
 				85EAB4162175EC0800F0F6FD /* UserSubmissionViewController.swift */,
+				2F719DA22170A224009C83A4 /* UserSubmissionDetailViewController.swift */,
 			);
 			path = Log;
 			sourceTree = "<group>";
@@ -373,6 +373,7 @@
 				2F6FC31721660912004609AC /* Sources */,
 				2F6FC31821660912004609AC /* Frameworks */,
 				2F6FC31921660912004609AC /* Resources */,
+				01F11D97AD396A533D9FCC7C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -435,6 +436,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		01F11D97AD396A533D9FCC7C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Bantu/Pods-Bantu-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ImageSlideshow/ImageSlideshow.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImageSlideshow.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bantu/Pods-Bantu-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		DD071266922407D5CF68DA2C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -503,7 +522,7 @@
 				2F6B620A216F639900BDC9A7 /* DefaultViewController.swift in Sources */,
 				2FA5E346216DDCDC00EB375C /* RegisteringViewController.swift in Sources */,
 				2989080B217596740019AF1B /* DraftEntity+CoreDataProperties.swift in Sources */,
-				2F719DA32170A224009C83A4 /* EventDetailViewController.swift in Sources */,
+				2F719DA32170A224009C83A4 /* UserSubmissionDetailViewController.swift in Sources */,
 				85EAB41D21763B9800F0F6FD /* StringExtension.swift in Sources */,
 				8529E013216F4B3F00879A98 /* Post.swift in Sources */,
 			);
