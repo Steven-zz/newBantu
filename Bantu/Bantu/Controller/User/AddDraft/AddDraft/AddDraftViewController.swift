@@ -75,19 +75,8 @@ class AddDraftViewController: UIViewController {
         
         self.setInitialNeedsParallelArray()
         
-//        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "DraftEntity")
-//        fetchRequest.includesPropertyValues = false
-//        do {
-//            let items = try LocalServices.context.fetch(fetchRequest) as! [NSManagedObject]
-//            for item in items {
-//                LocalServices.context.delete(item)
-//            }
-//            try LocalServices.context.save()
-//            print("Delete Success")
-//        }catch{
-//            print("Error")
-//        }
     }
+    
     
     func setInitialNeedsParallelArray(){
         for _ in 0..<self.needs.count{
@@ -151,75 +140,96 @@ class AddDraftViewController: UIViewController {
     func saveNewDraftToCoreData() {
         
         // Saving textview & textfield to core data
-//        let tempPost = DraftEntity(context: LocalServices.context)
-//        tempPost.schoolName = self.currentDraft.schoolName
-//        tempPost.aboutPost = self.currentDraft.about
-//        tempPost.studentNo = Int64(self.currentDraft.studentNo)
-//        tempPost.teacherNo = Int64(self.currentDraft.teacherNo)
-//        tempPost.accessPost = self.currentDraft.access
-//        tempPost.addressPost = self.currentDraft.address
-//        tempPost.notesPost = self.currentDraft.notes
-//
-//        tempPost.locationLatitude = self.currentDraft.locationLatitude
-//        tempPost.locationLongitude = self.currentDraft.locationLongitude
-//        tempPost.locationAOI = self.currentDraft.locationAOI
-//        tempPost.locationName = self.currentDraft.locationName
-//        tempPost.locationLocality = self.currentDraft.locationLocality
-//        tempPost.locationAdminArea = self.currentDraft.locationAdminArea
-//
-//
-//        // Testing Print
-//        print(tempPost.schoolName!)
-//        print(tempPost.aboutPost!)
-//        print(tempPost.studentNo)
-//        print(tempPost.teacherNo)
-//        print(tempPost.accessPost!)
-//        print(tempPost.addressPost!)
-//        print(tempPost.notesPost!)
-//        print(tempPost.locationLatitude)
-//        print(tempPost.locationLongitude)
-//        print(tempPost.locationAOI!)
-//        print(tempPost.locationName!)
-//        print(tempPost.locationLocality!)
-//        print(tempPost.locationAdminArea!)
-//
-//
-//        // Saving image to core data
-//        var CDataArraySchool = NSMutableArray()
-//        var CDataArrayRoad = NSMutableArray()
-//
-//
-//        for img in self.currentDraft.schoolImages {
-//            let data: NSData = NSData(data: img.jpegData(compressionQuality: 1)!)
-//            CDataArraySchool.add(data)
-//        }
-//
-//
-//        for img in self.currentDraft.roadImages {
-//            let data: NSData = NSData(data: img.jpegData(compressionQuality: 1)!)
-//            CDataArrayRoad.add(data)
-//        }
-//
-//
-//        let coreDataObjectSchool = NSKeyedArchiver.archivedData(withRootObject: CDataArraySchool)
-//        let coreDataObjectRoad = NSKeyedArchiver.archivedData(withRootObject: CDataArrayRoad)
-//
-//        tempPost.schoolImages = coreDataObjectSchool as NSData
-//        tempPost.roadImages = coreDataObjectRoad as NSData
-//
-//
-//        // Saving timestamp to core data
-//        let currDate = Date()
-//        let formatter = DateFormatter()
-//        formatter.dateFormat = "dd-mm-yyyy"
-//        let dateString = formatter.string(from: currDate)
-//        let dateDate = formatter.date(from: dateString)
-//
-//        print(dateDate!)
-//
-//        tempPost.timeStamp = dateDate as! NSDate
-//
-//        LocalServices.saveContext()
+        let tempPost = DraftEntity(context: LocalServices.context)
+        
+        
+        tempPost.schoolName = self.currentDraft.schoolName
+        tempPost.aboutPost = self.currentDraft.about
+        tempPost.studentNo = Int64(self.currentDraft.studentNo)
+        tempPost.teacherNo = Int64(self.currentDraft.teacherNo)
+        tempPost.accessPost = self.currentDraft.access
+        tempPost.addressPost = self.currentDraft.address
+        tempPost.notesPost = self.currentDraft.notes
+
+        tempPost.locationLatitude = self.currentDraft.locationLatitude
+        tempPost.locationLongitude = self.currentDraft.locationLongitude
+        tempPost.locationAOI = self.currentDraft.locationAOI
+        tempPost.locationName = self.currentDraft.locationName
+        tempPost.locationLocality = self.currentDraft.locationLocality
+        tempPost.locationAdminArea = self.currentDraft.locationAdminArea
+
+
+        // Testing Print
+        print(tempPost.schoolName!)
+        print(tempPost.aboutPost!)
+        print(tempPost.studentNo)
+        print(tempPost.teacherNo)
+        print(tempPost.accessPost!)
+        print(tempPost.addressPost!)
+        print(tempPost.notesPost!)
+        print(tempPost.locationLatitude)
+        print(tempPost.locationLongitude)
+        print(tempPost.locationAOI!)
+        print(tempPost.locationName!)
+        print(tempPost.locationLocality!)
+        print(tempPost.locationAdminArea!)
+        
+        // Saving needs to core data
+        
+        var CDataActiveNeeds: [[String:Any]] = []
+        for i in 0..<self.parallel.count {
+            
+            if (self.parallel[i] == true) {
+                var newDict: [String:Any] = [:]
+                newDict["needsId"] = self.needs[i].needsId
+                newDict["needsName"] = self.needs[i].needsName
+                CDataActiveNeeds.append(newDict)
+                
+            }
+        }
+        
+        tempPost.needsPost = CDataActiveNeeds
+        
+        print(CDataActiveNeeds)
+
+
+        // Saving image to core data
+        var CDataArraySchool = NSMutableArray()
+        var CDataArrayRoad = NSMutableArray()
+
+
+        
+        
+        for img in self.currentDraft.schoolImages {
+            let data: NSData = NSData(data: img.jpegData(compressionQuality: 1)!)
+            CDataArraySchool.add(data)
+        }
+
+
+        for img in self.currentDraft.roadImages {
+            let data: NSData = NSData(data: img.jpegData(compressionQuality: 1)!)
+            CDataArrayRoad.add(data)
+        }
+
+
+        let coreDataObjectSchool = NSKeyedArchiver.archivedData(withRootObject: CDataArraySchool)
+        let coreDataObjectRoad = NSKeyedArchiver.archivedData(withRootObject: CDataArrayRoad)
+
+        tempPost.schoolImages = coreDataObjectSchool as NSData
+        tempPost.roadImages = coreDataObjectRoad as NSData
+
+
+        // Saving timestamp to core data
+        let currDate = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd-mm-yyyy"
+        let dateString = formatter.string(from: currDate)
+
+        print(dateString)
+
+        tempPost.timeStamp = dateString
+
+        LocalServices.saveContext()
         
     }
     
@@ -296,21 +306,7 @@ extension AddDraftViewController: UICollectionViewDataSource, UICollectionViewDe
             else{
                 selectedCell.myNeedsLabel.backgroundColor = UIColor.lightGray
             }
-            
-//            print("Cell is selected at \(indexPath.row)")
-            var x: [String] = []
-            var yangMasukCoreData: [[String:Any]] = []
-            for i in 0..<self.parallel.count{
-                if (self.parallel[i] == true){
-//                    x.append(self.needs[i].needsName)
-                    var newDict: [String:Any] = [:]
-                    newDict["needsId"] = self.needs[i].needsId
-                    newDict["needsName"] = self.needs[i].needsName
-                    yangMasukCoreData.append(newDict)
-                    
-                }
-            }
-            print(yangMasukCoreData)
+
         }
     }
 
