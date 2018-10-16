@@ -52,7 +52,7 @@ class RegisteringViewController: UIViewController {
                             DispatchQueue.main.async {
                                 self.createOkAlert(title: "Berhasil", message: "Akun anda sudah terdaftar di Bantu!"){
                                     // go back to profile page
-                                    self.navigationController?.popViewController(animated: true)
+                                    self.navigationController?.popViewController(animated: false)
                                 }
                             }
                         }

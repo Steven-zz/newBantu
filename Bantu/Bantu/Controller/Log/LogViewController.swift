@@ -25,13 +25,7 @@ class LogViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         if (GlobalSession.isLoggedIn == true){
-            if (GlobalSession.loggedInUser.levelId == 2){
-                // public user
-            }
-            else{
-                // admin user
-                performSegue(withIdentifier: "logToAdmin", sender: self)
-            }
+            self.navigationController?.popViewController(animated: false)
         }
     }
     
