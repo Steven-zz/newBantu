@@ -20,8 +20,9 @@ class AddEventViewController: UIViewController {
     
     let datePicker = UIDatePicker()
     
-    let schools: [String] = ["SD01 Banten", "SD02 Banten", "SD03 Banten", "SD04 Banten", "SD05 Banten"]
-    var selectedSchool: String?
+    var acceptedPosts: [Post] = []
+    
+    var selectedPost: Post?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,13 +32,14 @@ class AddEventViewController: UIViewController {
         createSchoolPicker()
         createSchoolToolbar()
 
+    
+        self.acceptedPosts = GlobalSession.submissions.filter({$0.statusName == "Accepted"})
     }
     
     func createDatePicker() {
         startDateTextField.inputView = datePicker
         endDateTextField.inputView = datePicker
         datePicker.datePickerMode = .date
-        
     }
     
     func createSchoolPicker() {
@@ -88,14 +90,14 @@ extension AddEventViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return schools.count
+        return self.acceptedPosts.count
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return schools[row]
+        return self.acceptedPosts[row].schoolName
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        selectedSchool = schools[row]
-        schoolTitleTextField.text = selectedSchool
+        selectedPost = self.acceptedPosts[row]
+        schoolTitleTextField.text = selectedPost?.schoolName
     }
     
     

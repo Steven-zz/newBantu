@@ -12,6 +12,8 @@ class SubmissionViewController: UIViewController {
     
     @IBOutlet weak var submissionsTable: UITableView!
     
+    var selectedPost: Post!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,6 +29,13 @@ class SubmissionViewController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "adminSubmissionToDetail"){
+            let destination = segue.destination as! SubmissionDetailViewController
+            destination.currentPost = self.selectedPost
+        }
+    }
+    
 }
 
 
@@ -39,6 +48,11 @@ extension SubmissionViewController: UITableViewDataSource, UITableViewDelegate{
         let cell = tableView.dequeueReusableCell(withIdentifier: "postCell") as! postCell
         cell.setCell(post: GlobalSession.submissions[indexPath.row])
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.selectedPost = GlobalSession.submissions[indexPath.row]
+        performSegue(withIdentifier: "adminSubmissionToDetail", sender: self)
     }
     
     
