@@ -42,6 +42,7 @@
 		2FA5E344216DD83100EB375C /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA5E343216DD83100EB375C /* UITextField.swift */; };
 		2FA5E346216DDCDC00EB375C /* RegisteringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA5E345216DDCDC00EB375C /* RegisteringViewController.swift */; };
 		2FA5E348216DE0C800EB375C /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA5E347216DE0C800EB375C /* LogInViewController.swift */; };
+		2FBA047D2175C98F00C54860 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBA047C2175C98F00C54860 /* ProfileViewController.swift */; };
 		2FE953C9216B377800258F32 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE953C8216B377800258F32 /* HomeViewController.swift */; };
 		2FE953CC216B45CA00258F32 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE953CB216B45CA00258F32 /* HomeCell.swift */; };
 		2FE953CE216B46B400258F32 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE953CD216B46B400258F32 /* Event.swift */; };
@@ -96,6 +97,7 @@
 		2FA5E343216DD83100EB375C /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		2FA5E345216DDCDC00EB375C /* RegisteringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteringViewController.swift; sourceTree = "<group>"; };
 		2FA5E347216DE0C800EB375C /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		2FBA047C2175C98F00C54860 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		2FE953C8216B377800258F32 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2FE953CB216B45CA00258F32 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		2FE953CD216B46B400258F32 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 			children = (
 				2FE953C8216B377800258F32 /* HomeViewController.swift */,
 				2FA5E328216B593A00EB375C /* RegisterViewController.swift */,
+				2FBA047C2175C98F00C54860 /* ProfileViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -469,6 +472,7 @@
 				2FA5E348216DE0C800EB375C /* LogInViewController.swift in Sources */,
 				2F719D9A217091E0009C83A4 /* NeedSubmissionCell.swift in Sources */,
 				853D1C57217059550071A60E /* Needs.swift in Sources */,
+				2FBA047D2175C98F00C54860 /* ProfileViewController.swift in Sources */,
 				2FE953C9216B377800258F32 /* HomeViewController.swift in Sources */,
 				29D1CD7021747B7000282B5A /* NeedsEntity+CoreDataClass.swift in Sources */,
 				2FE953CE216B46B400258F32 /* Event.swift in Sources */,
@@ -625,7 +629,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B989SMZ93Y;
+				DEVELOPMENT_TEAM = TZ3HWHN35P;
 				INFOPLIST_FILE = Bantu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -644,7 +648,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B989SMZ93Y;
+				DEVELOPMENT_TEAM = TZ3HWHN35P;
 				INFOPLIST_FILE = Bantu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
