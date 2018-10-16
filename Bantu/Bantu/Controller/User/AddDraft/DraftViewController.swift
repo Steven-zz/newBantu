@@ -25,6 +25,7 @@ class DraftViewController: UIViewController {
     //MARK: Variable Declaration
     var currentDraft: Post!
     var selectedDraftIndex: Int!
+    var isNewDraft: Bool = false
     
     
     override func viewDidLoad() {
@@ -38,6 +39,14 @@ class DraftViewController: UIViewController {
         
         self.draftArray.removeAll()
         self.fetchFromCoreData()
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueToDraftDetail" {
+            let destination = segue.destination as! DraftDetailViewController
+            destination.currentDraft = self.currentDraft
+        }
     }
     
     
@@ -133,6 +142,8 @@ extension DraftViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.currentDraft = self.draftArray[indexPath.row]
         self.selectedDraftIndex = indexPath.row
+        print("Indexpath = \(indexPath.row)")
+        self.performSegue(withIdentifier: "segueToDraftDetail", sender: self)
         
     }
     
