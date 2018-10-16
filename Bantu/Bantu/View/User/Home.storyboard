@@ -115,6 +115,7 @@
                         <outlet property="eventsTableView" destination="3Rs-zC-vYr" id="mQE-SW-7Qd"/>
                         <outlet property="mySearchBar" destination="M5u-ho-zDr" id="Ssy-KC-TY6"/>
                         <segue destination="tDm-4h-W9X" kind="showDetail" identifier="homeToLog" id="KBM-Bo-YQp"/>
+                        <segue destination="akk-wT-t2V" kind="show" id="oSe-at-ClE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hKZ-CG-pOa" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -333,7 +334,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dOH-Dt-SKd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2510" y="351"/>
+            <point key="canvasLocation" x="1961" y="351"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="zaT-Ee-IcM">
