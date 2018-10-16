@@ -53,7 +53,7 @@ class LogInViewController: UIViewController {
                                     // to profile page
                                     GlobalSession.isLoggedIn = true
                                     GlobalSession.loggedInUser = singleUser
-                                    self.navigationController?.popViewController(animated: true)
+                                    self.navigationController?.popViewController(animated: false)
                                 }
                             }
                         }

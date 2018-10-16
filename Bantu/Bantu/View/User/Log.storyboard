@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6P9-5k-Xkj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5uw-jl-Nab">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -17,7 +17,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0VG-yj-mIi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2144.8000000000002" y="1558.3743842364534"/>
+            <point key="canvasLocation" x="710" y="1632"/>
         </scene>
         <!--Log View Controller-->
         <scene sceneID="h1F-Cb-Utr">
@@ -73,7 +73,6 @@
                         <outlet property="signInButton" destination="Ia4-9t-4Po" id="lya-FJ-8hs"/>
                         <segue destination="YQf-qf-1b7" kind="show" identifier="logToRegister" id="wTO-f4-TNo"/>
                         <segue destination="qUm-1r-u1Y" kind="show" identifier="logToLogIn" id="g1B-Yf-oOv"/>
-                        <segue destination="Thn-kk-TWu" kind="presentation" identifier="logToAdmin" animates="NO" id="ULi-4n-zam"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rZF-X3-ugS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -287,24 +286,6 @@
             </objects>
             <point key="canvasLocation" x="2954.4000000000001" y="1848.768472906404"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="kDE-do-M8k">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6P9-5k-Xkj" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3QB-am-ICb">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="dht-jT-1eB" kind="relationship" relationship="rootViewController" id="lYN-71-vj1"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2jF-XA-Zvr" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="260" y="1078.8177339901479"/>
-        </scene>
         <!--Bookmark-->
         <scene sceneID="Ks4-ei-bdm">
             <objects>
@@ -373,7 +354,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jvg-Fm-nUd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1202.4000000000001" y="1813.3004926108374"/>
+            <point key="canvasLocation" x="1724" y="1833"/>
         </scene>
         <!--Submission-->
         <scene sceneID="DBt-jX-u16">
@@ -523,20 +504,23 @@
                                             <segue destination="3sd-sK-47u" kind="show" id="lqT-vA-iXU"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="qyS-SW-Nr1" style="IBUITableViewCellStyleDefault" id="lSy-Rd-DiY">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="lSy-Rd-DiY">
                                         <rect key="frame" x="0.0" y="220" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lSy-Rd-DiY" id="OGo-KX-xHL">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Logout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qyS-SW-Nr1">
-                                                    <rect key="frame" x="16" y="0.0" width="343" height="43.666666666666664"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p1U-ps-mZF">
+                                                    <rect key="frame" x="16" y="6" width="48" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Logout">
+                                                        <color key="titleColor" red="1" green="0.1025861391" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="logoutButtonClicked:" destination="b0S-Fj-Lr8" eventType="touchUpInside" id="V4Y-yU-qNl"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -549,15 +533,21 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="teA-6w-K3z">
-                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="BaA-Eu-IPp"/>
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="BaA-Eu-IPp">
+                            <connections>
+                                <action selector="cancelButtonClicked:" destination="b0S-Fj-Lr8" id="2RY-u7-kdz"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="vD7-M3-qCz" id="kya-t5-ndV"/>
+                        <segue destination="dht-jT-1eB" kind="show" identifier="profileToLog" animates="NO" id="dio-OJ-zNx"/>
+                        <segue destination="Thn-kk-TWu" kind="presentation" identifier="profileToAdmin" animates="NO" id="v3R-st-vM0"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kkf-ul-tPe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="434.39999999999998" y="1813.3004926108374"/>
+            <point key="canvasLocation" x="-663" y="1849"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Thw-7f-i3a">
@@ -575,7 +565,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uor-kP-MsO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-508" y="1813.3004926108374"/>
+            <point key="canvasLocation" x="-662" y="1079"/>
         </scene>
     </scenes>
     <resources>
