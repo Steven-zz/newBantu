@@ -359,7 +359,7 @@
         <!--Submission-->
         <scene sceneID="DBt-jX-u16">
             <objects>
-                <viewController id="3sd-sK-47u" sceneMemberID="viewController">
+                <viewController id="3sd-sK-47u" customClass="UserSubmissionViewController" customModule="Bantu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vlg-Rp-VuJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -369,7 +369,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="88" id="VhR-c9-MVN">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="userSubmissionCell" rowHeight="88" id="VhR-c9-MVN" customClass="userSubmissionCell" customModule="Bantu" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="88"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VhR-c9-MVN" id="mLB-3y-Alz">
@@ -395,7 +395,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="02X-du-r1U">
-                                                    <rect key="frame" x="98" y="59" width="26" height="14"/>
+                                                    <rect key="frame" x="98" y="59" width="118" height="14"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
                                                     <nil key="textColor"/>
@@ -410,18 +410,32 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="locationLabel" destination="Uzm-Xb-Fh6" id="2aJ-Q9-Im6"/>
+                                            <outlet property="schoolName" destination="rQB-o9-zZj" id="QHB-pi-iC2"/>
+                                            <outlet property="statusLabel" destination="lJm-jQ-WpS" id="1Kv-5N-eXh"/>
+                                            <outlet property="thumbnail" destination="teJ-62-Jzb" id="WwE-Sw-fHy"/>
+                                            <outlet property="timeStampLabel" destination="02X-du-r1U" id="D1D-x1-V0K"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="3sd-sK-47u" id="fLA-Nn-XYY"/>
+                                    <outlet property="delegate" destination="3sd-sK-47u" id="k75-Fg-XDo"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="SI9-YU-Dqs"/>
                     </view>
                     <navigationItem key="navigationItem" title="Submission" id="V14-hM-9ol"/>
+                    <connections>
+                        <outlet property="userSubmissionTableView" destination="tOB-vY-Thc" id="S68-o2-EpU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xom-O0-G9h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-663" y="2650"/>
+            <point key="canvasLocation" x="-663.20000000000005" y="2649.7536945812808"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="Oec-SP-lqv">
