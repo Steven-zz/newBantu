@@ -32,7 +32,21 @@ class ProfileViewController: UITableViewController {
         }
         else{
             if (GlobalSession.loggedInUser.levelId == 1){
-                performSegue(withIdentifier: "profileToAdmin", sender: self)
+                if (GlobalSession.initialLogin == true){
+                    GlobalSession.initialLogin = false
+                    PostServices.getPosts(){ (posts) in
+                        GlobalSession.submissions = posts
+                        self.performSegue(withIdentifier: "profileToAdmin", sender: self)
+                    }
+                }
+            }
+            else{
+                if (GlobalSession.initialLogin == true){
+                    GlobalSession.initialLogin = false
+                    PostServices.getPostsByUser(){ (posts) in
+                        GlobalSession.submissions = posts
+                    }
+                }
             }
         }
     }
@@ -42,6 +56,7 @@ class ProfileViewController: UITableViewController {
         let yesAction = UIAlertAction(title: "Logout", style: .default) { (UIAlertAction) in
             GlobalSession.isLoggedIn = false
             GlobalSession.loggedInUser = nil
+            GlobalSession.initialLogin = true
             self.dismiss(animated: true, completion: nil)
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
