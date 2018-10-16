@@ -15,6 +15,10 @@ class HomeCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     
+    var months: [String] = [
+        "Januari", "Februari", "Maret", "April", "May", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"
+    ]
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -22,10 +26,7 @@ class HomeCell: UITableViewCell {
     func setCell(event: Event){
         self.eventImageView.image = event.img
         self.eventTitleLabel.text = event.eventName
-        
-        let startDateResult = event.startDate.replacingOccurrences(of: "-", with: "/")
-        let endDateResult = event.endDate.replacingOccurrences(of: "-", with: "/")
-        self.dateLabel.text = "\(startDateResult) - \(endDateResult)"
+        self.dateLabel.text = "\(event.startDate.beautifyDate()) - \(event.endDate.beautifyDate())"
         self.locationLabel.text = ""
     }
 }

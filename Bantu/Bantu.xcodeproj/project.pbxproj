@@ -62,6 +62,7 @@
 		85EAB4172175EC0800F0F6FD /* UserSubmissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EAB4162175EC0800F0F6FD /* UserSubmissionViewController.swift */; };
 		85EAB4192175F77000F0F6FD /* userSubmissionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EAB4182175F77000F0F6FD /* userSubmissionCell.swift */; };
 		85EAB41B21762D5100F0F6FD /* EventServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EAB41A21762D5100F0F6FD /* EventServices.swift */; };
+		85EAB41D21763B9800F0F6FD /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EAB41C21763B9800F0F6FD /* StringExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -123,6 +124,7 @@
 		85EAB4162175EC0800F0F6FD /* UserSubmissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSubmissionViewController.swift; sourceTree = "<group>"; };
 		85EAB4182175F77000F0F6FD /* userSubmissionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userSubmissionCell.swift; sourceTree = "<group>"; };
 		85EAB41A21762D5100F0F6FD /* EventServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventServices.swift; sourceTree = "<group>"; };
+		85EAB41C21763B9800F0F6FD /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		96FB6FFF3BDE33ED7269DF4B /* Pods-Bantu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bantu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bantu/Pods-Bantu.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -233,6 +235,7 @@
 				2FA5E330216D9D2200EB375C /* UIButton.swift */,
 				2FA5E343216DD83100EB375C /* UITextField.swift */,
 				8529E00E216F005500879A98 /* SHA1Extension.swift */,
+				85EAB41C21763B9800F0F6FD /* StringExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -501,6 +504,7 @@
 				2FA5E346216DDCDC00EB375C /* RegisteringViewController.swift in Sources */,
 				2989080B217596740019AF1B /* DraftEntity+CoreDataProperties.swift in Sources */,
 				2F719DA32170A224009C83A4 /* EventDetailViewController.swift in Sources */,
+				85EAB41D21763B9800F0F6FD /* StringExtension.swift in Sources */,
 				8529E013216F4B3F00879A98 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
