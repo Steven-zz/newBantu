@@ -129,7 +129,7 @@
                     <navigationItem key="navigationItem" title="Submission" id="sa4-0B-33y"/>
                     <connections>
                         <outlet property="submissionsTable" destination="e8F-ej-Xga" id="Drk-iK-OxB"/>
-                        <segue destination="GsQ-rf-vJa" kind="show" identifier="adminSubmissionToDetail" id="vMz-5Y-MPO"/>
+                        <segue destination="GsQ-rf-vJa" kind="presentation" identifier="adminSubmissionToDetail" id="vMz-5Y-MPO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ggt-Jc-HX2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -242,8 +242,8 @@ meter sampai ketemu pos satpam.</string>
                                             <rect key="frame" x="0.0" y="0.0" width="65" height="20"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uaJ-OB-z7f">
-                                                    <rect key="frame" x="13" y="2" width="49" height="14"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uaJ-OB-z7f">
+                                                    <rect key="frame" x="0.0" y="0.0" width="65" height="20"/>
                                                     <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
                                                     <nil key="textColor"/>
