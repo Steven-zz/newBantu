@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import CoreLocation
+import MapKit
 
 class SubmissionDetailViewController: UIViewController {
     
@@ -20,13 +22,17 @@ class SubmissionDetailViewController: UIViewController {
     @IBOutlet weak var accessTextView: UITextView!
     @IBOutlet weak var addressTextView: UITextView!
     @IBOutlet weak var notesTextView: UITextView!
+    @IBOutlet weak var myMapView: MKMapView!
     
     @IBOutlet weak var needsCollectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         self.setUpPost()
+        self.setUpMap()
     }
     
     func setUpPost(){
@@ -35,6 +41,14 @@ class SubmissionDetailViewController: UIViewController {
         self.accessTextView.text = self.currentPost.access
         self.addressTextView.text = self.currentPost.address
         self.notesTextView.text = self.currentPost.notes
+    }
+    
+    func setUpMap() {
+        let span: MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+        let myLocation: CLLocationCoordinate2D = CLLocationCoordinate2DMake(self.currentPost.locationLatitude, self.currentPost.locationLongitude)
+        let region: MKCoordinateRegion = MKCoordinateRegion(center: myLocation, span: span)
+        self.myMapView.setRegion(region, animated: true)
+        self.myMapView.showsUserLocation = true
     }
 }
 
