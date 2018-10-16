@@ -180,16 +180,6 @@
                                                     <outlet property="delegate" destination="uCC-ji-G4h" id="ktj-Wu-VBJ"/>
                                                 </connections>
                                             </textView>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JK4-Vz-iEY">
-                                                <rect key="frame" x="0.0" y="756" width="375" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                <connections>
-                                                    <outlet property="delegate" destination="uCC-ji-G4h" id="mKT-ga-8uj"/>
-                                                </connections>
-                                            </textView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="KEBUTUHAN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfE-qo-Xxm">
                                                 <rect key="frame" x="20" y="178" width="89" height="17"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -226,7 +216,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LOKASI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8bK-1m-1YP">
-                                                <rect key="frame" x="18" y="731" width="53" height="17"/>
+                                                <rect key="frame" x="20" y="784" width="53" height="17"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
                                                 <nil key="textColor"/>
@@ -240,7 +230,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lT4-Aj-BBf">
-                                                <rect key="frame" x="8" y="889" width="159" height="30"/>
+                                                <rect key="frame" x="8" y="899" width="159" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Post"/>
                                                 <connections>
@@ -283,7 +273,7 @@
                                                             </subviews>
                                                         </view>
                                                         <connections>
-                                                            <outlet property="myNeedsLabel" destination="AWR-Lz-5pr" id="i9m-wT-7gB"/>
+                                                            <outlet property="myNeedsLabel" destination="AWR-Lz-5pr" id="IuW-wF-pWs"/>
                                                         </connections>
                                                     </collectionViewCell>
                                                 </cells>
@@ -317,7 +307,7 @@
                                                             </subviews>
                                                         </view>
                                                         <connections>
-                                                            <outlet property="myImageView" destination="p4Q-kH-z2k" id="ezJ-Co-x77"/>
+                                                            <outlet property="myImageView" destination="p4Q-kH-z2k" id="RTD-eY-sPB"/>
                                                         </connections>
                                                     </collectionViewCell>
                                                 </cells>
@@ -351,7 +341,7 @@
                                                             </subviews>
                                                         </view>
                                                         <connections>
-                                                            <outlet property="myImageView" destination="xvm-cZ-Kby" id="YIc-Ut-7F1"/>
+                                                            <outlet property="myImageView" destination="xvm-cZ-Kby" id="PMF-y5-Gi9"/>
                                                         </connections>
                                                     </collectionViewCell>
                                                 </cells>
@@ -361,7 +351,7 @@
                                                 </connections>
                                             </collectionView>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="om8-YW-hHG">
-                                                <rect key="frame" x="197" y="889" width="170" height="30"/>
+                                                <rect key="frame" x="197" y="899" width="170" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Open Maps"/>
                                                 <connections>
@@ -369,12 +359,29 @@
                                                 </connections>
                                             </button>
                                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="SXv-E1-d9o">
-                                                <rect key="frame" x="8" y="799" width="359" height="79"/>
+                                                <rect key="frame" x="8" y="809" width="359" height="79"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="uCC-ji-G4h" id="jkg-oC-WsD"/>
                                                 </connections>
                                             </mapView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gps-Bh-6cW">
+                                                <rect key="frame" x="0.0" y="740" width="375" height="36"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="uCC-ji-G4h" id="a81-zS-sbc"/>
+                                                </connections>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CATATAN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="of8-hQ-6jL">
+                                                <rect key="frame" x="20" y="718" width="64" height="17"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <gestureRecognizers/>
@@ -412,9 +419,9 @@
                         <outlet property="accessTextView" destination="EYe-ga-udl" id="AQD-jc-loo"/>
                         <outlet property="addressTextView" destination="Ivs-MJ-OwC" id="0Ze-tX-AuK"/>
                         <outlet property="draftDetailScrollView" destination="UX8-uh-p5n" id="AgS-6O-Pog"/>
-                        <outlet property="locationTextView" destination="JK4-Vz-iEY" id="Rwj-tW-Qqa"/>
                         <outlet property="myMapView" destination="SXv-E1-d9o" id="de1-eP-Ldi"/>
                         <outlet property="needCollectionView" destination="8Z4-Q0-AEE" id="3Ri-1c-Off"/>
+                        <outlet property="notesTextView" destination="gps-Bh-6cW" id="7BG-KV-VOI"/>
                         <outlet property="roadCollectionView" destination="aIl-TW-kle" id="dNy-e4-G33"/>
                         <outlet property="schoolCollectionView" destination="x9g-4u-KDz" id="Lno-00-Apz"/>
                         <outlet property="schoolNameTextField" destination="7XC-pY-KsF" id="jfk-qI-Vy2"/>

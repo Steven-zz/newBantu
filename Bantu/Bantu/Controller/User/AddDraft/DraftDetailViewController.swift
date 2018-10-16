@@ -23,7 +23,7 @@ class DraftDetailViewController: UIViewController {
     @IBOutlet weak var studentNoTextView: UITextView!
     @IBOutlet weak var teacherNoTextView: UITextView!
     @IBOutlet weak var accessTextView: UITextView!
-    @IBOutlet weak var locationTextView: UITextView!
+    @IBOutlet weak var notesTextView: UITextView!
     
     
     //MARK: Outlet for scroll view
@@ -52,12 +52,18 @@ class DraftDetailViewController: UIViewController {
         super.viewDidLoad()
 
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Edit", style: .done, target: self, action: #selector(editButtonTapped))
-        
+        setInitialLoadFromCoreData()
     }
     
     
     func setInitialLoadFromCoreData() {
-        
+        self.schoolNameTextField.text = self.currentDraft.schoolName
+        self.aboutTextView.text = self.currentDraft.about
+        self.addressTextView.text = self.currentDraft.address
+        self.studentNoTextView.text = "\(self.currentDraft.studentNo)"
+        self.teacherNoTextView.text = "\(self.currentDraft.teacherNo)"
+        self.accessTextView.text = self.currentDraft.access
+        self.notesTextView.text = self.currentDraft.notes
     }
 
     
@@ -112,21 +118,23 @@ extension DraftDetailViewController: UICollectionViewDataSource, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if (collectionView == self.needCollectionView) {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "needCell", for: indexPath) as! NeedCollectionCell
+            let cell = self.needCollectionView.dequeueReusableCell(withReuseIdentifier: "needCell", for: indexPath) as! NeedCollectionCell
             cell.myNeedsLabel.text = self.currentDraft.needs[indexPath.row].needsName
             cell.myNeedsLabel.layer.borderColor = UIColor.cyan.cgColor
             cell.myNeedsLabel.layer.borderWidth = 1
             cell.myNeedsLabel.layer.cornerRadius = 3
+            return cell
             
         }
         else if (collectionView == self.schoolCollectionView) {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "schoolCell", for: indexPath) as! ImageCollectionCell
+            let cell = self.schoolCollectionView.dequeueReusableCell(withReuseIdentifier: "schoolCell", for: indexPath) as! ImageCollectionCell
             cell.setImage(image: self.currentDraft.schoolImages[indexPath.row])
             return cell
         }
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "roadCell", for: indexPath) as! ImageCollectionCell
+        let cell = self.roadCollectionView.dequeueReusableCell(withReuseIdentifier: "roadCell", for: indexPath) as! ImageCollectionCell
         cell.setImage(image: self.currentDraft.roadImages[indexPath.row])
+        print(indexPath.row)
         return cell
     }
     
