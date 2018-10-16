@@ -13,6 +13,9 @@ struct GlobalSession{
     static var rootUrl = "https://bantuapp.online/public"
     static var loggedInUser: User!
     static var isLoggedIn: Bool = false
+    
+    static var submissions: [Post] = []
+    static var initialLogin: Bool = true
 }
 
 struct AddDraft {
