@@ -39,7 +39,7 @@ class AddDraftViewController: UIViewController {
     
     
     //MARK: Variable Declaration
-    var currentDraft = Post(postId: 0, userId: 0, statusId: 0, timeStamp: "", schoolName: "", about: "", studentNo: 0, teacherNo: 0, address: "", access: "", notes: "", locationAOI: "", locationName: "", locationLocality: "", locationAdminArea: "", locationLatitude: 0, locationLongitude: 0, schoolImages: [], roadImages: [], needs: [])
+    var currentDraft = Post(postId: 0, userId: 0, statusId: 0, timeStamp: "", schoolName: "", about: "", studentNo: 0, teacherNo: 0, address: "", access: "", notes: "", locationAOI: "", locationName: "", locationLocality: "", locationAdminArea: "", locationLatitude: 0, locationLongitude: 0, fullName: "", schoolImages: [], roadImages: [], needs: [])
     
     var isNewDraft: Bool!
     var isPickingSchool: Bool = false
