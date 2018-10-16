@@ -30,7 +30,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="226" id="m62-NR-4aK" customClass="HomeCell" customModule="Bantu" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="homeCell" rowHeight="226" id="m62-NR-4aK" customClass="HomeCell" customModule="Bantu" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="226"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="m62-NR-4aK" id="J9F-r9-7ym">
@@ -112,7 +112,7 @@
                     <navigationItem key="navigationItem" title="Event" id="4BF-5n-aIL"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="tableView" destination="3Rs-zC-vYr" id="gAW-6e-Oau"/>
+                        <outlet property="eventsTableView" destination="3Rs-zC-vYr" id="mQE-SW-7Qd"/>
                         <segue destination="tDm-4h-W9X" kind="showDetail" identifier="homeToLog" id="KBM-Bo-YQp"/>
                     </connections>
                 </viewController>
