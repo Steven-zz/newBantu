@@ -52,10 +52,17 @@ class DraftDetailViewController: UIViewController {
         super.viewDidLoad()
 
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Edit", style: .done, target: self, action: #selector(editButtonTapped))
+        
+    }
+    
+    
+    func setInitialLoadFromCoreData() {
+        
     }
 
     
     @objc func editButtonTapped() {
+        
         
     }
 
