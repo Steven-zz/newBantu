@@ -12,28 +12,38 @@ class SubmissionViewController: UIViewController {
     
     @IBOutlet weak var submissionsTable: UITableView!
     
-    let need: [String] = ["Buku", "Pencil","Baju"]
-
+    var posts: [Post] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.getSubmissions()
     }
     
+    
     func getSubmissions(){
-        
+        PostServices.getPosts(){ (tempPosts) in
+            self.posts = tempPosts
+            DispatchQueue.main.async {
+                self.submissionsTable.reloadData()
+            }
+        }
     }
 }
 
-extension SubmissionViewController: UICollectionViewDataSource, UICollectionViewDelegate {
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return need.count
+
+extension SubmissionViewController: UITableViewDataSource, UITableViewDelegate{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.posts.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! NeedSubmissionCell
-        cell.needSubmissionLabel.text = need[indexPath.row]
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "postCell") as! postCell
+        cell.setCell(post: self.posts[indexPath.row])
         return cell
     }
+    
+    
 }
+
+
