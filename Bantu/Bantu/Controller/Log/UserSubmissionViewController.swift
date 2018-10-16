@@ -19,6 +19,12 @@ class UserSubmissionViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    func getSubmissions(){
+        PostServices.getPostsByUser(){ (submissions) in
+            self.submissions = submissions
+        }
+    }
 
 }
 
