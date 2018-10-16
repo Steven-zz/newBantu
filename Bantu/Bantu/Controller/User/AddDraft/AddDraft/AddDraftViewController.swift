@@ -64,6 +64,7 @@ class AddDraftViewController: UIViewController {
         Needs(needsId: 4, needsName: "Alat Tulis"),
         Needs(needsId: 5, needsName: "Al-quran")
     ]
+    var parallel: [Bool] = []
     var selectedNeeds: [Bool] = []
     var selectedIndex: Int = 0
 
@@ -74,6 +75,13 @@ class AddDraftViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(saveButtonTapped))
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelButtonTapped))
         
+        self.setInitialNeedsParallelArray()
+    }
+    
+    func setInitialNeedsParallelArray(){
+        for _ in 0..<self.needs.count{
+            self.parallel.append(false)
+        }
     }
     
     
@@ -228,11 +236,11 @@ extension AddDraftViewController: UICollectionViewDataSource, UICollectionViewDe
         if (collectionView == self.needCollectionView) {
             let cell = self.needCollectionView.dequeueReusableCell(withReuseIdentifier: "needCell", for: indexPath) as! NeedCollectionCell
             cell.myNeedsLabel.text = self.needs[indexPath.row].needsName
-            cell.myNeedsLabel.backgroundColor = UIColor.lightGray
+ 
             cell.myNeedsLabel.layer.borderColor = UIColor.black.cgColor
             cell.myNeedsLabel.layer.borderWidth = 1
             cell.myNeedsLabel.layer.cornerRadius = 3
-            
+
             return cell
         }
         else if (collectionView == self.schoolCollectionView) {
@@ -266,20 +274,35 @@ extension AddDraftViewController: UICollectionViewDataSource, UICollectionViewDe
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if (collectionView == self.needCollectionView) {
-            selectedIndex = indexPath.item
-            print(selectedIndex)
+            
+            let selectedCell = self.needCollectionView.cellForItem(at: indexPath)! as! NeedCollectionCell
+            
+            self.parallel[indexPath.row] = !self.parallel[indexPath.row]
+            
+            if (self.parallel[indexPath.row] == true){
+                selectedCell.myNeedsLabel.backgroundColor = UIColor.cyan
+            }
+            else{
+                selectedCell.myNeedsLabel.backgroundColor = UIColor.lightGray
+            }
+            
+//            print("Cell is selected at \(indexPath.row)")
+            var x: [String] = []
+            var yangMasukCoreData: [[String:Any]] = []
+            for i in 0..<self.parallel.count{
+                if (self.parallel[i] == true){
+//                    x.append(self.needs[i].needsName)
+                    var newDict: [String:Any] = [:]
+                    newDict["needsId"] = self.needs[i].needsId
+                    newDict["needsName"] = self.needs[i].needsName
+                    yangMasukCoreData.append(newDict)
+                    
+                }
+            }
+            print(yangMasukCoreData)
         }
     }
-//
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        print("Keteken")
-//        if (collectionView == self.needCollectionView) {
-//            selectedIndex = indexPath.item
-//            print("Selected Index = \(selectedIndex)")
-//        }
-//
-//    }
-//
+
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
