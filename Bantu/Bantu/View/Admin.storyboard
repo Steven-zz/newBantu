@@ -81,7 +81,7 @@
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="19" translatesAutoresizingMaskIntoConstraints="NO" id="b3f-y4-gPM">
                                                                         <rect key="frame" x="0.0" y="0.0" width="60" height="20"/>
-                                                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -752,11 +752,11 @@ meter sampai ketemu pos satpam.</string>
             </objects>
             <point key="canvasLocation" x="1020" y="35"/>
         </scene>
-        <!--Item-->
+        <!--Submission-->
         <scene sceneID="zPg-I7-54T">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NNJ-6r-iMp" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="pmo-TG-Fcz"/>
+                    <tabBarItem key="tabBarItem" title="Submission" id="pmo-TG-Fcz"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AbJ-3j-FDb">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -771,11 +771,11 @@ meter sampai ketemu pos satpam.</string>
             </objects>
             <point key="canvasLocation" x="2904.8000000000002" y="34.729064039408868"/>
         </scene>
-        <!--Item-->
+        <!--Event-->
         <scene sceneID="8XJ-ZB-Fp6">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Nvo-NU-30O" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="YJd-Hk-27B"/>
+                    <tabBarItem key="tabBarItem" title="Event" id="YJd-Hk-27B"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="w8C-sc-SQG">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
