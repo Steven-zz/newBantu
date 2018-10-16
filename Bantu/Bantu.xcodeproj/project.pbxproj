@@ -61,6 +61,7 @@
 		85EAB4152175DA0A00F0F6FD /* needsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EAB4142175DA0A00F0F6FD /* needsCell.swift */; };
 		85EAB4172175EC0800F0F6FD /* UserSubmissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EAB4162175EC0800F0F6FD /* UserSubmissionViewController.swift */; };
 		85EAB4192175F77000F0F6FD /* userSubmissionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EAB4182175F77000F0F6FD /* userSubmissionCell.swift */; };
+		85EAB41B21762D5100F0F6FD /* EventServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EAB41A21762D5100F0F6FD /* EventServices.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -121,6 +122,7 @@
 		85EAB4142175DA0A00F0F6FD /* needsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = needsCell.swift; sourceTree = "<group>"; };
 		85EAB4162175EC0800F0F6FD /* UserSubmissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSubmissionViewController.swift; sourceTree = "<group>"; };
 		85EAB4182175F77000F0F6FD /* userSubmissionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userSubmissionCell.swift; sourceTree = "<group>"; };
+		85EAB41A21762D5100F0F6FD /* EventServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventServices.swift; sourceTree = "<group>"; };
 		96FB6FFF3BDE33ED7269DF4B /* Pods-Bantu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bantu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bantu/Pods-Bantu.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -334,6 +336,7 @@
 				8529E00A216EFD3700879A98 /* UserServices.swift */,
 				8529E010216F4A9C00879A98 /* PostServices.swift */,
 				853D1C5C21705D990071A60E /* NeedsServices.swift */,
+				85EAB41A21762D5100F0F6FD /* EventServices.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -469,6 +472,7 @@
 				85EAB4132175C58800F0F6FD /* postCell.swift in Sources */,
 				8529E00D216EFEC600879A98 /* User.swift in Sources */,
 				29D1CD752174820600282B5A /* NeedCollectionCell.swift in Sources */,
+				85EAB41B21762D5100F0F6FD /* EventServices.swift in Sources */,
 				29A008F62175DD6E00F71413 /* DraftDetailViewController.swift in Sources */,
 				8529E011216F4A9C00879A98 /* PostServices.swift in Sources */,
 				29D1CD7321747E9E00282B5A /* ImageCollectionCell.swift in Sources */,
@@ -645,7 +649,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TZ3HWHN35P;
+				DEVELOPMENT_TEAM = B989SMZ93Y;
 				INFOPLIST_FILE = Bantu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -664,7 +668,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TZ3HWHN35P;
+				DEVELOPMENT_TEAM = B989SMZ93Y;
 				INFOPLIST_FILE = Bantu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

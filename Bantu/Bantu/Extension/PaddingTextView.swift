@@ -9,18 +9,32 @@
 import Foundation
 import UIKit
 
+@IBDesignable
 class PaddingTextView: UITextView, UITextViewDelegate {
     
-    func setTextView() {
-        self.text = "Placeholders"
-        self.textColor = UIColor.lightGray
-        self.returnKeyType = .done
-        self.textContainerInset = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
+    @IBInspectable var placeholder: String? {
+        didSet {
+            setTextView()
+        }
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
         self.delegate = self
     }
     
+    func setTextView() {
+        guard let placeHolder = placeholder else {return}
+        self.text = placeHolder
+        self.textColor = UIColor.lightGray
+        self.returnKeyType = .done
+        self.textContainerInset = UIEdgeInsets(top: 8, left: 16, bottom: 16, right: 16)
+        
+    }
+    
     func textViewDidBeginEditing(_ textView: UITextView) {
-        if self.text == "Placeholders" {
+        guard let placeHolder = placeholder else {return}
+        if self.text == placeHolder {
             self.text = ""
             self.textColor = UIColor.black
         }
@@ -34,7 +48,8 @@ class PaddingTextView: UITextView, UITextViewDelegate {
     
     func textViewDidEndEditing(_ textView: UITextView) {
         if self.text == "" {
-            self.text = "Placeholders"
+            guard let placeHolder = placeholder else {return}
+            self.text = placeHolder
             self.textColor = UIColor.lightGray
         }
     }

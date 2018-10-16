@@ -16,31 +16,3 @@ extension UITextField {
         
     }
 }
-
-
-extension UITextView {
-    
-    func setIndentTextView() {
-        self.textContainerInset = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
-        
-        self.text = "Placeholders"
-        self.textColor = UIColor.lightGray
-        self.returnKeyType = .done
-        self.textContainerInset = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
-    }
-    
-    
-    
-    
-}
-
-extension UITextViewDelegate {
-    
-    func textViewDidBeginEditing(_ textView: UITextView) {
-        if textView.text == "Placeholders" {
-            textView.text = ""
-            textView.textColor = UIColor.black
-        }
-    }
-    
-}

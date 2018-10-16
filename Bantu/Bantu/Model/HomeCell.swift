@@ -17,12 +17,16 @@ class HomeCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        eventImageView.setRounded()
     }
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    func setCell(event: Event){
+        self.eventImageView.image = event.img
+        self.eventTitleLabel.text = event.eventName
+        
+        let startDateResult = event.startDate.replacingOccurrences(of: "-", with: "/")
+        let endDateResult = event.endDate.replacingOccurrences(of: "-", with: "/")
+        self.dateLabel.text = "\(startDateResult) - \(endDateResult)"
+        self.locationLabel.text = ""
     }
 }
 

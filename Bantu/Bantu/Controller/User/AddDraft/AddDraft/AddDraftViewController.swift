@@ -65,7 +65,10 @@ class AddDraftViewController: UIViewController {
         super.viewDidLoad()
         
         self.schoolNameTextField.setIndentLeftPadding()
-        self.aboutTextField.setIndentTextView()
+    //        self.aboutTextField.setIndentTextView()
+    //        self.addressTextView.setIndentTextView()
+    //        self.accessTextView.setIndentTextView()
+    //        self.notesTextView.setIndentTextView()
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(saveButtonTapped))
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelButtonTapped))

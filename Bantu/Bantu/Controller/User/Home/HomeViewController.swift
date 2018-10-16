@@ -13,11 +13,13 @@ import CoreData
 class HomeViewController: UIViewController {
     
     
-    @IBOutlet weak var tableView: UITableView!
     
-    var event = [Event]()
+    @IBOutlet weak var eventsTableView: UITableView!
+    
+    var events: [Event] = []
+    var filteredEvents: [Event] = []
+    
     var selectedIndex: Int = 0
-    var search = [Event]()
     var searching = false
     
 //    @IBAction func shareButtonTapped(_ sender: Any) {
@@ -40,9 +42,17 @@ class HomeViewController: UIViewController {
         self.resultController.tableView.dataSource = self
         self.resultController.tableView.delegate = self
         
-        
-        
         self.setNeeds()
+        self.getEvents()
+    }
+    
+    func getEvents(){
+        EventServices.getEvents(){ (events) in
+            self.events = events
+            DispatchQueue.main.async {
+                self.eventsTableView.reloadData()
+            }
+        }
     }
     
     func setNeeds(){
@@ -106,24 +116,6 @@ class HomeViewController: UIViewController {
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named:"user-4"), style: .plain, target: self, action: #selector(profileTapped))
     }
-    func updateSearchResults(for searchController: UISearchController) {
-        //Filter through the event titles
-
-//
-//        self.filteredEventTitles = self.eventTitles.filter({ (eventTitle: String) -> Bool in
-//            if eventTitles.contains(self.searchController.searchBar.text!) {
-//                return true
-//            } else {
-//                return false
-//            }
-//        })
-        //Update the result of tableview
-//        self.resultController.tableView.reloadData()
-
-    }
-
-
-    
     
     @objc func profileTapped() {
         performSegue(withIdentifier: "homeToLog", sender: nil)
@@ -133,23 +125,19 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if searching == true {
-            return search.count
+            return self.filteredEvents.count
         } else {
-            return event.count
+            return self.events.count
         }
-        
-
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! HomeCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "homeCell", for: indexPath) as! HomeCell
         if searching == true {
-            
+            cell.setCell(event: self.filteredEvents[indexPath.row])
         } else {
-            
+            cell.setCell(event: self.events[indexPath.row])
         }
-        
-    
         return cell
     }
     
