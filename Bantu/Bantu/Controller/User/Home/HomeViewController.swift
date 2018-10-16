@@ -40,8 +40,7 @@ class HomeViewController: UIViewController {
         self.resultController.tableView.dataSource = self
         self.resultController.tableView.delegate = self
         
-        event.append(Event(image: UIImage(named: "dummy")!, title: "Gior", date: "10 - 11 September 2018", location: "Banten"))
-        event.append(Event(image: UIImage(named: "dummy")!, title: "Tanri", date: "12 - 13 September 2018", location: "Jakarta"))
+        
         
         self.setNeeds()
     }
@@ -145,17 +144,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! HomeCell
         if searching == true {
-            cell.eventImageView.image = search[indexPath.row].image
-            cell.eventTitleLabel.text = "\(search[indexPath.row].title)"
-            cell.dateLabel.text = "\(search[indexPath.row].date)"
-            cell.locationLabel.text = "\(search[indexPath.row].location)"
-            print("Data masuk")
+            
         } else {
-            cell.eventImageView.image = event[indexPath.row].image
-            cell.eventTitleLabel.text = "\(event[indexPath.row].title)"
-            cell.dateLabel.text = "\(event[indexPath.row].date)"
-            cell.locationLabel.text = "\(event[indexPath.row].location)"
-           
+            
         }
         
     
@@ -173,16 +164,16 @@ extension UIImageView {
 
 extension HomeViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        search = event.filter({$0.title.lowercased().contains(searchText.lowercased())})
-        if searchText == ""{
-            search = event
-        }
-        searching = true
-        self.tableView.reloadData()
+//        search = event.filter({$0.title.lowercased().contains(searchText.lowercased())})
+//        if searchText == ""{
+//            search = event
+//        }
+//        searching = true
+//        self.tableView.reloadData()
     }
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        searching = false
-        searchBar.text = ""
-        self.tableView.reloadData()
+//        searching = false
+//        searchBar.text = ""
+//        self.tableView.reloadData()
     }
 }
