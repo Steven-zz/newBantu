@@ -57,13 +57,7 @@ class AddDraftViewController: UIViewController {
     
     
     //MARK: Array Declaration
-    var needs: [Needs] = [
-        Needs(needsId: 1, needsName: "Air"),
-        Needs(needsId: 2, needsName: "Buku"),
-        Needs(needsId: 3, needsName: "Seragam"),
-        Needs(needsId: 4, needsName: "Alat Tulis"),
-        Needs(needsId: 5, needsName: "Al-quran")
-    ]
+    var needs: [Needs] = []
     var parallel: [Bool] = []
 
     
@@ -73,8 +67,7 @@ class AddDraftViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(saveButtonTapped))
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelButtonTapped))
         
-        self.setInitialNeedsParallelArray()
-        
+        self.fetchAllNeedsFromCoreData()
     }
     
     
@@ -137,6 +130,27 @@ class AddDraftViewController: UIViewController {
         self.present(imagePicker, animated: true, completion: nil)
     }
     
+    
+    func fetchAllNeedsFromCoreData() {
+        
+        let fetchRequest: NSFetchRequest<NeedsEntity> = NeedsEntity.fetchRequest()
+        do{
+            let fetchData = try LocalServices.context.fetch(fetchRequest)
+            let tempResult = fetchData
+            
+            for x in tempResult {
+                let needsId: Int = Int(x.needsId)
+                let needsName: String = x.needsName!
+                let newNeed = Needs(needsId: needsId, needsName: needsName)
+                self.needs.append(newNeed)
+            }
+            self.setInitialNeedsParallelArray()
+            self.needCollectionView.reloadData()
+            
+        } catch {
+            print("Fetch from core data fail")
+        }
+    }
     
     //MARK: Save to Core Data
     func saveNewDraftToCoreData() {

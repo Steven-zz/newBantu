@@ -23,7 +23,7 @@ class DraftDetailViewController: UIViewController {
     @IBOutlet weak var studentNoTextView: UITextView!
     @IBOutlet weak var teacherNoTextView: UITextView!
     @IBOutlet weak var accessTextView: UITextView!
-    @IBOutlet weak var locationTextView: UITextView!
+    @IBOutlet weak var notesTextView: UITextView!
     
     
     //MARK: Outlet for scroll view
@@ -47,15 +47,69 @@ class DraftDetailViewController: UIViewController {
     
     var locationManager = CLLocationManager()
     
+    var needs: [Needs] = []
+    var parallel: [Bool] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Edit", style: .done, target: self, action: #selector(editButtonTapped))
+        setInitialLoadFromCoreData()
+        
+        self.fetchAllNeedsFromCoreData()
+    }
+    
+    func setNeeds(){
+        for _ in 0..<self.needs.count{
+            self.parallel.append(false)
+        }
+        
+        for postNeed in self.currentDraft.needs{
+            for i in 0..<self.needs.count{
+                if (postNeed.needsId == self.needs[i].needsId){
+                    self.parallel[i] = true
+                    break
+                }
+            }
+        }
+    }
+    
+    func fetchAllNeedsFromCoreData() {
+        
+        let fetchRequest: NSFetchRequest<NeedsEntity> = NeedsEntity.fetchRequest()
+        do{
+            let fetchData = try LocalServices.context.fetch(fetchRequest)
+            let tempResult = fetchData
+            
+            for x in tempResult {
+                let needsId: Int = Int(x.needsId)
+                let needsName: String = x.needsName!
+                let newNeed = Needs(needsId: needsId, needsName: needsName)
+                self.needs.append(newNeed)
+            }
+            self.setNeeds()
+            self.needCollectionView.reloadData()
+            
+        } catch {
+            print("Fetch from core data fail")
+        }
+    }
+    
+    
+    func setInitialLoadFromCoreData() {
+        self.schoolNameTextField.text = self.currentDraft.schoolName
+        self.aboutTextView.text = self.currentDraft.about
+        self.addressTextView.text = self.currentDraft.address
+        self.studentNoTextView.text = "\(self.currentDraft.studentNo)"
+        self.teacherNoTextView.text = "\(self.currentDraft.teacherNo)"
+        self.accessTextView.text = self.currentDraft.access
+        self.notesTextView.text = self.currentDraft.notes
     }
 
     
     @objc func editButtonTapped() {
+        
         
     }
 
@@ -91,7 +145,7 @@ extension DraftDetailViewController: UICollectionViewDataSource, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if (collectionView == self.needCollectionView) {
-            return self.currentDraft.needs.count
+            return self.needs.count
         }
         else if (collectionView == self.schoolCollectionView) {
             return self.currentDraft.schoolImages.count
@@ -105,21 +159,29 @@ extension DraftDetailViewController: UICollectionViewDataSource, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if (collectionView == self.needCollectionView) {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "needCell", for: indexPath) as! NeedCollectionCell
-            cell.myNeedsLabel.text = self.currentDraft.needs[indexPath.row].needsName
-            cell.myNeedsLabel.layer.borderColor = UIColor.cyan.cgColor
+            let cell = self.needCollectionView.dequeueReusableCell(withReuseIdentifier: "needCell", for: indexPath) as! NeedCollectionCell
+            cell.myNeedsLabel.text = self.needs[indexPath.row].needsName
+            if (self.parallel[indexPath.row] == true){
+                cell.myNeedsLabel.backgroundColor = UIColor.cyan
+            }
+            else{
+                cell.myNeedsLabel.backgroundColor = UIColor.gray
+            }
+            cell.myNeedsLabel.layer.borderColor = UIColor.black.cgColor
             cell.myNeedsLabel.layer.borderWidth = 1
             cell.myNeedsLabel.layer.cornerRadius = 3
+            return cell
             
         }
         else if (collectionView == self.schoolCollectionView) {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "schoolCell", for: indexPath) as! ImageCollectionCell
+            let cell = self.schoolCollectionView.dequeueReusableCell(withReuseIdentifier: "schoolCell", for: indexPath) as! ImageCollectionCell
             cell.setImage(image: self.currentDraft.schoolImages[indexPath.row])
             return cell
         }
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "roadCell", for: indexPath) as! ImageCollectionCell
+        let cell = self.roadCollectionView.dequeueReusableCell(withReuseIdentifier: "roadCell", for: indexPath) as! ImageCollectionCell
         cell.setImage(image: self.currentDraft.roadImages[indexPath.row])
+        print(indexPath.row)
         return cell
     }
     

@@ -31,6 +31,16 @@ class userSubmissionCell: UITableViewCell {
         self.locationLabel.text = "\(self.currentSubmission.locationLocality), \(self.currentSubmission.locationAdminArea)"
         self.timeStampLabel.text = self.currentSubmission.timeStamp
         self.statusLabel.text = self.currentSubmission.statusName
+        
+        if (self.currentSubmission.statusName == "Accepted"){
+            self.statusLabel.textColor = UIColor.green
+        }
+        else if (self.currentSubmission.statusName == "Pending"){
+            self.statusLabel.textColor = UIColor.orange
+        }
+        else{
+            self.statusLabel.textColor = UIColor.red
+        }
     }
 
 
