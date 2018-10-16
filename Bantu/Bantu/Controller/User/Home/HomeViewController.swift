@@ -12,8 +12,7 @@ import CoreData
 
 class HomeViewController: UIViewController {
     
-    
-    
+    @IBOutlet weak var mySearchBar: UISearchBar!
     @IBOutlet weak var eventsTableView: UITableView!
     
     var events: [Event] = []
@@ -44,6 +43,10 @@ class HomeViewController: UIViewController {
         
         self.setNeeds()
         self.getEvents()
+    }
+    
+    override var canBecomeFirstResponder: Bool{
+        return true
     }
     
     func getEvents(){
@@ -152,16 +155,17 @@ extension UIImageView {
 
 extension HomeViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-//        search = event.filter({$0.title.lowercased().contains(searchText.lowercased())})
-//        if searchText == ""{
-//            search = event
-//        }
-//        searching = true
-//        self.tableView.reloadData()
+        self.filteredEvents = self.events.filter({$0.eventName.lowercased().contains(searchText.lowercased())})
+        if searchText == ""{
+            self.filteredEvents = self.events
+        }
+        searching = true
+        self.eventsTableView.reloadData()
     }
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-//        searching = false
-//        searchBar.text = ""
-//        self.tableView.reloadData()
+        searching = false
+        searchBar.text = ""
+        self.eventsTableView.reloadData()
+        self.becomeFirstResponder()
     }
 }

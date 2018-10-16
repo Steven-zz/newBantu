@@ -113,6 +113,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="eventsTableView" destination="3Rs-zC-vYr" id="mQE-SW-7Qd"/>
+                        <outlet property="mySearchBar" destination="M5u-ho-zDr" id="Ssy-KC-TY6"/>
                         <segue destination="tDm-4h-W9X" kind="showDetail" identifier="homeToLog" id="KBM-Bo-YQp"/>
                     </connections>
                 </viewController>
