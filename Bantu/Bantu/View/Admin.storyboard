@@ -106,6 +106,9 @@
                         <viewLayoutGuide key="safeArea" id="jBN-qi-lA1"/>
                     </view>
                     <navigationItem key="navigationItem" title="Submission" id="sa4-0B-33y"/>
+                    <connections>
+                        <outlet property="submissionsTable" destination="e8F-ej-Xga" id="Drk-iK-OxB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ggt-Jc-HX2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -703,6 +706,7 @@ meter sampai ketemu pos satpam.</string>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="vJr-49-f6O" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zHj-Qt-bgv">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

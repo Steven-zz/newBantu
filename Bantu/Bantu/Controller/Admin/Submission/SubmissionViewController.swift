@@ -10,12 +10,18 @@ import UIKit
 
 class SubmissionViewController: UIViewController {
     
+    @IBOutlet weak var submissionsTable: UITableView!
+    
     let need: [String] = ["Buku", "Pencil","Baju"]
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+    }
+    
+    func getSubmissions(){
+        
     }
 }
 
@@ -31,16 +37,3 @@ extension SubmissionViewController: UICollectionViewDataSource, UICollectionView
         return cell
     }
 }
-
-//extension SubmissionViewController: UITableViewDelegate, UITableViewDataSource {
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//    return 0
-//
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        return
-//    }
-
-//
-//}
