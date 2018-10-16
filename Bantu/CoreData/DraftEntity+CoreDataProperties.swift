@@ -34,6 +34,6 @@ extension DraftEntity {
     @NSManaged public var schoolName: String?
     @NSManaged public var studentNo: Int64
     @NSManaged public var teacherNo: Int64
-    @NSManaged public var timeStamp: NSDate?
+    @NSManaged public var timeStamp: String?
 
 }
