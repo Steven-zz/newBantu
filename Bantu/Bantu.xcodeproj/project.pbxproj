@@ -57,6 +57,8 @@
 		853D1C5D21705D990071A60E /* NeedsServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853D1C5C21705D990071A60E /* NeedsServices.swift */; };
 		85EAB4132175C58800F0F6FD /* postCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EAB4122175C58800F0F6FD /* postCell.swift */; };
 		85EAB4152175DA0A00F0F6FD /* needsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EAB4142175DA0A00F0F6FD /* needsCell.swift */; };
+		85EAB4172175EC0800F0F6FD /* UserSubmissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EAB4162175EC0800F0F6FD /* UserSubmissionViewController.swift */; };
+		85EAB4192175F77000F0F6FD /* userSubmissionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EAB4182175F77000F0F6FD /* userSubmissionCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -113,6 +115,8 @@
 		853D1C5C21705D990071A60E /* NeedsServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeedsServices.swift; sourceTree = "<group>"; };
 		85EAB4122175C58800F0F6FD /* postCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = postCell.swift; sourceTree = "<group>"; };
 		85EAB4142175DA0A00F0F6FD /* needsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = needsCell.swift; sourceTree = "<group>"; };
+		85EAB4162175EC0800F0F6FD /* UserSubmissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSubmissionViewController.swift; sourceTree = "<group>"; };
+		85EAB4182175F77000F0F6FD /* userSubmissionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userSubmissionCell.swift; sourceTree = "<group>"; };
 		96FB6FFF3BDE33ED7269DF4B /* Pods-Bantu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bantu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bantu/Pods-Bantu.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -241,6 +245,7 @@
 				29D1CD742174820600282B5A /* NeedCollectionCell.swift */,
 				85EAB4122175C58800F0F6FD /* postCell.swift */,
 				85EAB4142175DA0A00F0F6FD /* needsCell.swift */,
+				85EAB4182175F77000F0F6FD /* userSubmissionCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -302,6 +307,7 @@
 				2FA5E341216DCA0D00EB375C /* LogViewController.swift */,
 				2FA5E345216DDCDC00EB375C /* RegisteringViewController.swift */,
 				2FA5E347216DE0C800EB375C /* LogInViewController.swift */,
+				85EAB4162175EC0800F0F6FD /* UserSubmissionViewController.swift */,
 			);
 			path = Log;
 			sourceTree = "<group>";
@@ -444,6 +450,7 @@
 			files = (
 				8529E00B216EFD3700879A98 /* UserServices.swift in Sources */,
 				2FA5E338216DA01400EB375C /* AddDraftViewController.swift in Sources */,
+				85EAB4192175F77000F0F6FD /* userSubmissionCell.swift in Sources */,
 				2F719D9821708D61009C83A4 /* SubmissionViewController.swift in Sources */,
 				2FA5E344216DD83100EB375C /* UITextField.swift in Sources */,
 				296BE554216F5CD7006A6B88 /* LocalModel.xcdatamodeld in Sources */,
@@ -468,6 +475,7 @@
 				8529E00F216F005500879A98 /* SHA1Extension.swift in Sources */,
 				2FA5E32D216B61B600EB375C /* PaddingTextField.swift in Sources */,
 				2F719DA12170A215009C83A4 /* EventViewController.swift in Sources */,
+				85EAB4172175EC0800F0F6FD /* UserSubmissionViewController.swift in Sources */,
 				85EAB4152175DA0A00F0F6FD /* needsCell.swift in Sources */,
 				2FA5E348216DE0C800EB375C /* LogInViewController.swift in Sources */,
 				2F719D9A217091E0009C83A4 /* NeedSubmissionCell.swift in Sources */,
