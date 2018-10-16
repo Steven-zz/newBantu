@@ -42,6 +42,7 @@
 		2FA5E344216DD83100EB375C /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA5E343216DD83100EB375C /* UITextField.swift */; };
 		2FA5E346216DDCDC00EB375C /* RegisteringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA5E345216DDCDC00EB375C /* RegisteringViewController.swift */; };
 		2FA5E348216DE0C800EB375C /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA5E347216DE0C800EB375C /* LogInViewController.swift */; };
+		2FBA047D2175C98F00C54860 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBA047C2175C98F00C54860 /* ProfileViewController.swift */; };
 		2FE953C9216B377800258F32 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE953C8216B377800258F32 /* HomeViewController.swift */; };
 		2FE953CC216B45CA00258F32 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE953CB216B45CA00258F32 /* HomeCell.swift */; };
 		2FE953CE216B46B400258F32 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE953CD216B46B400258F32 /* Event.swift */; };
@@ -54,6 +55,8 @@
 		8529E013216F4B3F00879A98 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8529E012216F4B3F00879A98 /* Post.swift */; };
 		853D1C57217059550071A60E /* Needs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853D1C56217059550071A60E /* Needs.swift */; };
 		853D1C5D21705D990071A60E /* NeedsServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853D1C5C21705D990071A60E /* NeedsServices.swift */; };
+		85EAB4132175C58800F0F6FD /* postCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EAB4122175C58800F0F6FD /* postCell.swift */; };
+		85EAB4152175DA0A00F0F6FD /* needsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EAB4142175DA0A00F0F6FD /* needsCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +97,7 @@
 		2FA5E343216DD83100EB375C /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		2FA5E345216DDCDC00EB375C /* RegisteringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteringViewController.swift; sourceTree = "<group>"; };
 		2FA5E347216DE0C800EB375C /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		2FBA047C2175C98F00C54860 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		2FE953C8216B377800258F32 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2FE953CB216B45CA00258F32 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		2FE953CD216B46B400258F32 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -107,6 +111,8 @@
 		8529E012216F4B3F00879A98 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		853D1C56217059550071A60E /* Needs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Needs.swift; sourceTree = "<group>"; };
 		853D1C5C21705D990071A60E /* NeedsServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeedsServices.swift; sourceTree = "<group>"; };
+		85EAB4122175C58800F0F6FD /* postCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = postCell.swift; sourceTree = "<group>"; };
+		85EAB4142175DA0A00F0F6FD /* needsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = needsCell.swift; sourceTree = "<group>"; };
 		96FB6FFF3BDE33ED7269DF4B /* Pods-Bantu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bantu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bantu/Pods-Bantu.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -233,6 +239,8 @@
 				2F719D99217091E0009C83A4 /* NeedSubmissionCell.swift */,
 				29D1CD7221747E9E00282B5A /* ImageCollectionCell.swift */,
 				29D1CD742174820600282B5A /* NeedCollectionCell.swift */,
+				85EAB4122175C58800F0F6FD /* postCell.swift */,
+				85EAB4142175DA0A00F0F6FD /* needsCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -242,6 +250,7 @@
 			children = (
 				2FE953C8216B377800258F32 /* HomeViewController.swift */,
 				2FA5E328216B593A00EB375C /* RegisterViewController.swift */,
+				2FBA047C2175C98F00C54860 /* ProfileViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -444,6 +453,7 @@
 				2FA5E329216B593A00EB375C /* RegisterViewController.swift in Sources */,
 				2FA5E342216DCA0D00EB375C /* LogViewController.swift in Sources */,
 				2F719DA52170A249009C83A4 /* AddEventViewController.swift in Sources */,
+				85EAB4132175C58800F0F6FD /* postCell.swift in Sources */,
 				8529E00D216EFEC600879A98 /* User.swift in Sources */,
 				29D1CD752174820600282B5A /* NeedCollectionCell.swift in Sources */,
 				8529E011216F4A9C00879A98 /* PostServices.swift in Sources */,
@@ -458,9 +468,11 @@
 				8529E00F216F005500879A98 /* SHA1Extension.swift in Sources */,
 				2FA5E32D216B61B600EB375C /* PaddingTextField.swift in Sources */,
 				2F719DA12170A215009C83A4 /* EventViewController.swift in Sources */,
+				85EAB4152175DA0A00F0F6FD /* needsCell.swift in Sources */,
 				2FA5E348216DE0C800EB375C /* LogInViewController.swift in Sources */,
 				2F719D9A217091E0009C83A4 /* NeedSubmissionCell.swift in Sources */,
 				853D1C57217059550071A60E /* Needs.swift in Sources */,
+				2FBA047D2175C98F00C54860 /* ProfileViewController.swift in Sources */,
 				2FE953C9216B377800258F32 /* HomeViewController.swift in Sources */,
 				29D1CD7021747B7000282B5A /* NeedsEntity+CoreDataClass.swift in Sources */,
 				2FE953CE216B46B400258F32 /* Event.swift in Sources */,
@@ -617,7 +629,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B989SMZ93Y;
+				DEVELOPMENT_TEAM = TZ3HWHN35P;
 				INFOPLIST_FILE = Bantu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -636,7 +648,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B989SMZ93Y;
+				DEVELOPMENT_TEAM = TZ3HWHN35P;
 				INFOPLIST_FILE = Bantu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

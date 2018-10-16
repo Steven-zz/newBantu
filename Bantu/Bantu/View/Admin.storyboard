@@ -22,7 +22,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="127" id="nmj-g1-JzA">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="postCell" rowHeight="127" id="nmj-g1-JzA" customClass="postCell" customModule="Bantu" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="127"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nmj-g1-JzA" id="K6i-Vc-xPl">
@@ -34,14 +34,14 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SDN 7 Mangkurayat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eMD-0R-DaR">
-                                                    <rect key="frame" x="105" y="19" width="132" height="17"/>
+                                                    <rect key="frame" x="105" y="19" width="255" height="17"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kec. Cilawu, Garut" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SBz-Z2-oVz">
-                                                    <rect key="frame" x="105" y="71" width="101" height="14"/>
+                                                    <rect key="frame" x="105" y="71" width="255" height="14"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
                                                     <nil key="textColor"/>
@@ -65,23 +65,22 @@
                                                     <rect key="frame" x="105" y="44" width="270" height="19"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OiJ-kY-7AO">
-                                                        <size key="itemSize" width="75" height="19"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OiJ-kY-7AO">
+                                                        <size key="itemSize" width="60" height="19"/>
                                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
-                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="wpr-jV-ssC" customClass="NeedSubmissionCell" customModule="Bantu" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="75" height="19"/>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="needsCell" id="wpr-jV-ssC" customClass="needsCell" customModule="Bantu" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="-0.66666666666666663" width="60" height="20"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                                <rect key="frame" x="0.0" y="0.0" width="75" height="19"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="60" height="20"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="19" translatesAutoresizingMaskIntoConstraints="NO" id="b3f-y4-gPM">
-                                                                        <rect key="frame" x="13" y="2" width="49" height="14"/>
-                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="19" translatesAutoresizingMaskIntoConstraints="NO" id="b3f-y4-gPM">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="20"/>
                                                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
                                                                         <nil key="textColor"/>
@@ -89,17 +88,39 @@
                                                                     </label>
                                                                 </subviews>
                                                             </view>
-                                                            <size key="customSize" width="75" height="19"/>
+                                                            <constraints>
+                                                                <constraint firstItem="b3f-y4-gPM" firstAttribute="width" secondItem="wpr-jV-ssC" secondAttribute="width" id="Zlr-z9-mkq"/>
+                                                                <constraint firstItem="b3f-y4-gPM" firstAttribute="centerX" secondItem="wpr-jV-ssC" secondAttribute="centerX" id="haP-j5-b4e"/>
+                                                                <constraint firstItem="b3f-y4-gPM" firstAttribute="centerY" secondItem="wpr-jV-ssC" secondAttribute="centerY" id="ndl-Ww-Uw7"/>
+                                                                <constraint firstItem="b3f-y4-gPM" firstAttribute="height" secondItem="wpr-jV-ssC" secondAttribute="height" id="sib-do-vtp"/>
+                                                            </constraints>
+                                                            <size key="customSize" width="60" height="20"/>
                                                             <connections>
-                                                                <outlet property="needSubmissionLabel" destination="b3f-y4-gPM" id="yQw-HM-q5G"/>
+                                                                <outlet property="needsLabel" destination="b3f-y4-gPM" id="tDy-E4-sCb"/>
                                                             </connections>
                                                         </collectionViewCell>
                                                     </cells>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="nmj-g1-JzA" id="lne-8e-TCs"/>
+                                                        <outlet property="delegate" destination="nmj-g1-JzA" id="FGC-aF-gtS"/>
+                                                    </connections>
                                                 </collectionView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="fullNameLabel" destination="iOZ-i1-oDj" id="XMq-bd-Dy2"/>
+                                            <outlet property="locationLabel" destination="SBz-Z2-oVz" id="RJa-J4-C1t"/>
+                                            <outlet property="needsCollectionView" destination="GR0-q9-2d6" id="wbF-5g-T9U"/>
+                                            <outlet property="schoolNameLabel" destination="eMD-0R-DaR" id="gje-sf-hSw"/>
+                                            <outlet property="thumbnail" destination="EUc-wR-1eU" id="5ig-vc-r9F"/>
+                                            <outlet property="timeStampLabel" destination="fvY-Gk-WSw" id="LZF-NJ-jUn"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Jrr-hC-bpI" id="5Zp-Xf-jU3"/>
+                                    <outlet property="delegate" destination="Jrr-hC-bpI" id="tgS-Dy-NtE"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
