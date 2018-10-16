@@ -30,7 +30,6 @@
 		2F719D9A217091E0009C83A4 /* NeedSubmissionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F719D99217091E0009C83A4 /* NeedSubmissionCell.swift */; };
 		2F719D9C21709E73009C83A4 /* SubmissionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F719D9B21709E73009C83A4 /* SubmissionDetailViewController.swift */; };
 		2F719DA12170A215009C83A4 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F719DA02170A215009C83A4 /* EventViewController.swift */; };
-		2F719DA32170A224009C83A4 /* UserSubmissionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F719DA22170A224009C83A4 /* UserSubmissionDetailViewController.swift */; };
 		2F719DA52170A249009C83A4 /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F719DA42170A249009C83A4 /* AddEventViewController.swift */; };
 		2FA1BA29216DFD7900528619 /* DraftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA1BA28216DFD7900528619 /* DraftViewController.swift */; };
 		2FA1BA2D216DFE1700528619 /* DraftCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA1BA2C216DFE1700528619 /* DraftCell.swift */; };
@@ -91,7 +90,6 @@
 		2F719D99217091E0009C83A4 /* NeedSubmissionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeedSubmissionCell.swift; sourceTree = "<group>"; };
 		2F719D9B21709E73009C83A4 /* SubmissionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmissionDetailViewController.swift; sourceTree = "<group>"; };
 		2F719DA02170A215009C83A4 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
-		2F719DA22170A224009C83A4 /* UserSubmissionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSubmissionDetailViewController.swift; sourceTree = "<group>"; };
 		2F719DA42170A249009C83A4 /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
 		2FA1BA28216DFD7900528619 /* DraftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraftViewController.swift; sourceTree = "<group>"; };
 		2FA1BA2C216DFE1700528619 /* DraftCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraftCell.swift; sourceTree = "<group>"; };
@@ -318,7 +316,6 @@
 				2FA5E345216DDCDC00EB375C /* RegisteringViewController.swift */,
 				2FA5E347216DE0C800EB375C /* LogInViewController.swift */,
 				85EAB4162175EC0800F0F6FD /* UserSubmissionViewController.swift */,
-				2F719DA22170A224009C83A4 /* UserSubmissionDetailViewController.swift */,
 			);
 			path = Log;
 			sourceTree = "<group>";
@@ -522,7 +519,6 @@
 				2F6B620A216F639900BDC9A7 /* DefaultViewController.swift in Sources */,
 				2FA5E346216DDCDC00EB375C /* RegisteringViewController.swift in Sources */,
 				2989080B217596740019AF1B /* DraftEntity+CoreDataProperties.swift in Sources */,
-				2F719DA32170A224009C83A4 /* UserSubmissionDetailViewController.swift in Sources */,
 				85EAB41D21763B9800F0F6FD /* StringExtension.swift in Sources */,
 				8529E013216F4B3F00879A98 /* Post.swift in Sources */,
 			);
