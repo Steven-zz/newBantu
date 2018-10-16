@@ -107,7 +107,7 @@ extension DraftDetailViewController: UICollectionViewDataSource, UICollectionVie
         if (collectionView == self.needCollectionView) {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "needCell", for: indexPath) as! NeedCollectionCell
             cell.myNeedsLabel.text = self.currentDraft.needs[indexPath.row].needsName
-            cell.myNeedsLabel.layer.borderColor = UIColor.cyan
+            cell.myNeedsLabel.layer.borderColor = UIColor.cyan.cgColor
             cell.myNeedsLabel.layer.borderWidth = 1
             cell.myNeedsLabel.layer.cornerRadius = 3
             
