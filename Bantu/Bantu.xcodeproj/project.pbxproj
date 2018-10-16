@@ -62,6 +62,7 @@
 		85EAB4192175F77000F0F6FD /* userSubmissionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EAB4182175F77000F0F6FD /* userSubmissionCell.swift */; };
 		85EAB41B21762D5100F0F6FD /* EventServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EAB41A21762D5100F0F6FD /* EventServices.swift */; };
 		85EAB41D21763B9800F0F6FD /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EAB41C21763B9800F0F6FD /* StringExtension.swift */; };
+		85EAB41F21768BE500F0F6FD /* UserSubmissionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EAB41E21768BE500F0F6FD /* UserSubmissionDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -123,6 +124,7 @@
 		85EAB4182175F77000F0F6FD /* userSubmissionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userSubmissionCell.swift; sourceTree = "<group>"; };
 		85EAB41A21762D5100F0F6FD /* EventServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventServices.swift; sourceTree = "<group>"; };
 		85EAB41C21763B9800F0F6FD /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		85EAB41E21768BE500F0F6FD /* UserSubmissionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSubmissionDetailViewController.swift; sourceTree = "<group>"; };
 		96FB6FFF3BDE33ED7269DF4B /* Pods-Bantu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bantu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bantu/Pods-Bantu.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -316,6 +318,7 @@
 				2FA5E345216DDCDC00EB375C /* RegisteringViewController.swift */,
 				2FA5E347216DE0C800EB375C /* LogInViewController.swift */,
 				85EAB4162175EC0800F0F6FD /* UserSubmissionViewController.swift */,
+				85EAB41E21768BE500F0F6FD /* UserSubmissionDetailViewController.swift */,
 			);
 			path = Log;
 			sourceTree = "<group>";
@@ -482,6 +485,7 @@
 				2F719D9821708D61009C83A4 /* SubmissionViewController.swift in Sources */,
 				2FA5E344216DD83100EB375C /* UITextField.swift in Sources */,
 				296BE554216F5CD7006A6B88 /* LocalModel.xcdatamodeld in Sources */,
+				85EAB41F21768BE500F0F6FD /* UserSubmissionDetailViewController.swift in Sources */,
 				296BE57E216F60E0006A6B88 /* LocalServices.swift in Sources */,
 				8529E008216EFC0B00879A98 /* GlobalModel.swift in Sources */,
 				2F6FC31F21660912004609AC /* AppDelegate.swift in Sources */,
