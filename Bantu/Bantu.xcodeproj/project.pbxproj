@@ -12,6 +12,7 @@
 		296BE57E216F60E0006A6B88 /* LocalServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296BE57D216F60E0006A6B88 /* LocalServices.swift */; };
 		2989080A217596740019AF1B /* DraftEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29890808217596740019AF1B /* DraftEntity+CoreDataClass.swift */; };
 		2989080B217596740019AF1B /* DraftEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29890809217596740019AF1B /* DraftEntity+CoreDataProperties.swift */; };
+		29A008F62175DD6E00F71413 /* DraftDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A008F52175DD6E00F71413 /* DraftDetailViewController.swift */; };
 		29D1CD7021747B7000282B5A /* NeedsEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D1CD6C21747B7000282B5A /* NeedsEntity+CoreDataClass.swift */; };
 		29D1CD7121747B7000282B5A /* NeedsEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D1CD6D21747B7000282B5A /* NeedsEntity+CoreDataProperties.swift */; };
 		29D1CD7321747E9E00282B5A /* ImageCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D1CD7221747E9E00282B5A /* ImageCollectionCell.swift */; };
@@ -67,6 +68,7 @@
 		296BE57D216F60E0006A6B88 /* LocalServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalServices.swift; sourceTree = "<group>"; };
 		29890808217596740019AF1B /* DraftEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DraftEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		29890809217596740019AF1B /* DraftEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DraftEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		29A008F52175DD6E00F71413 /* DraftDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraftDetailViewController.swift; sourceTree = "<group>"; };
 		29D1CD6C21747B7000282B5A /* NeedsEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NeedsEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		29D1CD6D21747B7000282B5A /* NeedsEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NeedsEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		29D1CD7221747E9E00282B5A /* ImageCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionCell.swift; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				2FA1BA28216DFD7900528619 /* DraftViewController.swift */,
+				29A008F52175DD6E00F71413 /* DraftDetailViewController.swift */,
 			);
 			name = Draft;
 			path = AddDraft;
@@ -463,6 +466,7 @@
 				85EAB4132175C58800F0F6FD /* postCell.swift in Sources */,
 				8529E00D216EFEC600879A98 /* User.swift in Sources */,
 				29D1CD752174820600282B5A /* NeedCollectionCell.swift in Sources */,
+				29A008F62175DD6E00F71413 /* DraftDetailViewController.swift in Sources */,
 				8529E011216F4A9C00879A98 /* PostServices.swift in Sources */,
 				29D1CD7321747E9E00282B5A /* ImageCollectionCell.swift in Sources */,
 				2F719D9C21709E73009C83A4 /* SubmissionDetailViewController.swift in Sources */,

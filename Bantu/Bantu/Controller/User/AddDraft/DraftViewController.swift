@@ -25,6 +25,7 @@ class DraftViewController: UIViewController {
     //MARK: Variable Declaration
     var currentDraft: Post!
     var selectedDraftIndex: Int!
+    var isNewDraft: Bool = false
     
     
     override func viewDidLoad() {
@@ -38,6 +39,14 @@ class DraftViewController: UIViewController {
         
         self.draftArray.removeAll()
         self.fetchFromCoreData()
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueToDraftDetail" {
+            let destination = segue.destination as! DraftDetailViewController
+            destination.currentDraft = self.currentDraft
+        }
     }
     
     
@@ -79,7 +88,7 @@ class DraftViewController: UIViewController {
                     }
                 }
                 
-                self.draftArray.append(Post(postId: 0, userId: 0, statusId: 0, timeStamp: x.timeStamp!, schoolName: x.schoolName!, about: x.aboutPost!, studentNo: Int(x.studentNo), teacherNo: Int(x.teacherNo), address: x.addressPost!, access: x.accessPost!, notes: x.notesPost!, locationAOI: x.locationAOI!, locationName: x.locationName!, locationLocality: x.locationLocality!, locationAdminArea: x.locationAdminArea!, locationLatitude: x.locationLatitude, locationLongitude: x.locationLongitude, fullName: "", schoolImages: tempSchool, roadImages: tempRoad, needs: tempNeeds))
+                self.draftArray.append(Post(postId: 0, userId: 0, statusId: 0, timeStamp: x.timeStamp!, schoolName: x.schoolName!, about: x.aboutPost!, studentNo: Int(x.studentNo), teacherNo: Int(x.teacherNo), address: x.addressPost!, access: x.accessPost!, notes: x.notesPost!, locationAOI: x.locationAOI!, locationName: x.locationName!, locationLocality: x.locationLocality!, locationAdminArea: x.locationAdminArea!, locationLatitude: x.locationLatitude, locationLongitude: x.locationLongitude, fullName: "", statusName: "", schoolImages: tempSchool, roadImages: tempRoad, needs: tempNeeds))
             }
             
             print("Fetch from core data successful")
@@ -133,6 +142,8 @@ extension DraftViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.currentDraft = self.draftArray[indexPath.row]
         self.selectedDraftIndex = indexPath.row
+        print("Indexpath = \(indexPath.row)")
+        self.performSegue(withIdentifier: "segueToDraftDetail", sender: self)
         
     }
     
