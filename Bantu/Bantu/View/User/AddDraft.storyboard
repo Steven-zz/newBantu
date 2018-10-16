@@ -61,7 +61,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="JUMLAH MURID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uwk-Dq-W8y">
-                                                <rect key="frame" x="20" y="282" width="109" height="17"/>
+                                                <rect key="frame" x="20" y="284" width="109" height="17"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
                                                 <nil key="textColor"/>
@@ -90,13 +90,6 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LOKASI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fez-Pv-1ho">
                                                 <rect key="frame" x="18" y="812" width="53" height="17"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="JUMLAH GURU" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZN7-GY-sXk">
-                                                <rect key="frame" x="197" y="281" width="104" height="17"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
                                                 <nil key="textColor"/>
@@ -152,6 +145,14 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yh1-DD-BsS">
+                                                <rect key="frame" x="137" y="942" width="113" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Dapatkan Lokasi"/>
+                                                <connections>
+                                                    <action selector="tapToShareLocation:" destination="kmj-Hu-fei" eventType="touchUpInside" id="yXJ-W8-t4K"/>
+                                                </connections>
+                                            </button>
                                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="AVA-5W-Wms">
                                                 <rect key="frame" x="0.0" y="837" width="375" height="79"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -207,33 +208,40 @@
                                                     <outlet property="delegate" destination="kmj-Hu-fei" id="hpd-bH-sew"/>
                                                 </connections>
                                             </collectionView>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rkI-HQ-aIQ">
-                                                <rect key="frame" x="0.0" y="220" width="375" height="30"/>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rkI-HQ-aIQ">
+                                                <rect key="frame" x="18" y="220" width="338" height="60"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WQY-G6-ZEH">
-                                                    <size key="itemSize" width="65" height="30"/>
+                                                    <size key="itemSize" width="65" height="20"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="needCell" id="Y4P-pl-xgo" customClass="NeedCollectionCell" customModule="Bantu" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="65" height="30"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="65" height="20"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                            <rect key="frame" x="0.0" y="0.0" width="65" height="30"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="65" height="20"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N2A-v4-Gry">
-                                                                    <rect key="frame" x="11" y="5" width="42" height="21"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N2A-v4-Gry">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="65" height="20"/>
+                                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
                                                         </view>
+                                                        <constraints>
+                                                            <constraint firstItem="N2A-v4-Gry" firstAttribute="top" secondItem="Y4P-pl-xgo" secondAttribute="top" id="7Dn-te-QWm"/>
+                                                            <constraint firstAttribute="trailing" secondItem="N2A-v4-Gry" secondAttribute="trailing" id="A7s-sg-oMA"/>
+                                                            <constraint firstItem="N2A-v4-Gry" firstAttribute="leading" secondItem="Y4P-pl-xgo" secondAttribute="leading" id="Qof-Ss-dYr"/>
+                                                            <constraint firstAttribute="bottom" secondItem="N2A-v4-Gry" secondAttribute="bottom" id="wFz-IS-a4F"/>
+                                                        </constraints>
+                                                        <size key="customSize" width="65" height="20"/>
                                                         <connections>
                                                             <outlet property="myNeedsLabel" destination="N2A-v4-Gry" id="wSm-t9-0Nw"/>
                                                         </connections>
@@ -292,14 +300,13 @@
                                                     <outlet property="delegate" destination="kmj-Hu-fei" id="g57-c9-K8m"/>
                                                 </connections>
                                             </collectionView>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yh1-DD-BsS">
-                                                <rect key="frame" x="137" y="942" width="113" height="30"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="JUMLAH GURU" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZN7-GY-sXk">
+                                                <rect key="frame" x="197" y="284" width="104" height="17"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Dapatkan Lokasi"/>
-                                                <connections>
-                                                    <action selector="tapToShareLocation:" destination="kmj-Hu-fei" eventType="touchUpInside" id="yXJ-W8-t4K"/>
-                                                </connections>
-                                            </button>
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <gestureRecognizers/>
@@ -317,6 +324,9 @@
                                     <constraint firstItem="Asw-sJ-kDs" firstAttribute="leading" secondItem="6yD-Ma-zJO" secondAttribute="leading" id="qcI-Ic-ic6"/>
                                     <constraint firstAttribute="trailing" secondItem="Asw-sJ-kDs" secondAttribute="trailing" id="xZg-Se-ROk"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="kmj-Hu-fei" id="TEl-fr-GgD"/>
+                                </connections>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>

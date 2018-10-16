@@ -12,7 +12,9 @@
         <!--Admin-->
         <scene sceneID="Mi7-kc-smF">
             <objects>
-                <viewControllerPlaceholder storyboardName="Admin" id="Thn-kk-TWu" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Admin" id="Thn-kk-TWu" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="eH6-0P-WLP"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0VG-yj-mIi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="958" y="1670"/>
@@ -71,7 +73,7 @@
                         <outlet property="signInButton" destination="Ia4-9t-4Po" id="lya-FJ-8hs"/>
                         <segue destination="YQf-qf-1b7" kind="show" identifier="logToRegister" id="wTO-f4-TNo"/>
                         <segue destination="qUm-1r-u1Y" kind="show" identifier="logToLogIn" id="g1B-Yf-oOv"/>
-                        <segue destination="Thn-kk-TWu" kind="show" identifier="logToAdmin" id="ULi-4n-zam"/>
+                        <segue destination="Thn-kk-TWu" kind="presentation" identifier="logToAdmin" animates="NO" id="ULi-4n-zam"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rZF-X3-ugS" userLabel="First Responder" sceneMemberID="firstResponder"/>

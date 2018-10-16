@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7VE-LC-eLl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vJr-49-f6O">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="e8F-ej-Xga">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="127" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="e8F-ej-Xga">
                                 <rect key="frame" x="0.0" y="88" width="375" height="641"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -106,10 +106,13 @@
                         <viewLayoutGuide key="safeArea" id="jBN-qi-lA1"/>
                     </view>
                     <navigationItem key="navigationItem" title="Submission" id="sa4-0B-33y"/>
+                    <connections>
+                        <outlet property="submissionsTable" destination="e8F-ej-Xga" id="Drk-iK-OxB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ggt-Jc-HX2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1962.4000000000001" y="34.729064039408868"/>
+            <point key="canvasLocation" x="3847.1999999999998" y="34.729064039408868"/>
         </scene>
         <!--Submission Detail View Controller-->
         <scene sceneID="b9G-ez-z1p">
@@ -255,26 +258,7 @@ meter sampai ketemu pos satpam.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="muc-Nj-ha6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2928.8000000000002" y="34.729064039408868"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="BJD-ef-zal">
-            <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="7VE-LC-eLl" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gXh-Fh-hHj">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="fiu-VZ-1Wx" kind="relationship" relationship="viewControllers" id="s1a-Rj-xGs"/>
-                        <segue destination="6Pl-4Q-rWr" kind="relationship" relationship="viewControllers" id="9NT-7b-mvs"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2W3-Hd-3cr" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="77.599999999999994" y="34.729064039408868"/>
+            <point key="canvasLocation" x="4813.6000000000004" y="34.729064039408868"/>
         </scene>
         <!--Event-->
         <scene sceneID="80A-17-FiT">
@@ -343,45 +327,7 @@ meter sampai ketemu pos satpam.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q8r-JN-3Wj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1962.4000000000001" y="810.59113300492618"/>
-        </scene>
-        <!--Item-->
-        <scene sceneID="QWP-OY-DaS">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fiu-VZ-1Wx" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="tvD-ed-jle"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fiF-VJ-nrg">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Jrr-hC-bpI" kind="relationship" relationship="rootViewController" id="Hu0-Gg-67Z"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NVO-WQ-Ma0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1020" y="34.729064039408868"/>
-        </scene>
-        <!--Item-->
-        <scene sceneID="Ffw-9n-dNA">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6Pl-4Q-rWr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="UDX-tE-nvi"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="my8-nN-h3K">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="ghp-hU-4GE" kind="relationship" relationship="rootViewController" id="aEO-oD-6ah"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iaA-Q1-RfJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1020" y="810.59113300492618"/>
+            <point key="canvasLocation" x="2904.8000000000002" y="810.59113300492618"/>
         </scene>
         <!--Add Event View Controller-->
         <scene sceneID="pXQ-cq-C8m">
@@ -624,7 +570,7 @@ meter sampai ketemu pos satpam.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0a4-Du-pet" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2925.5999999999999" y="1063.3004926108374"/>
+            <point key="canvasLocation" x="3868" y="1063.3004926108374"/>
         </scene>
         <!--Event Detail View Controller-->
         <scene sceneID="dp0-Fq-esw">
@@ -753,6 +699,63 @@ meter sampai ketemu pos satpam.</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ItX-rH-eVc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1962" y="1499"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="fPc-mc-n8e">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="vJr-49-f6O" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zHj-Qt-bgv">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="NNJ-6r-iMp" kind="relationship" relationship="viewControllers" id="ZMy-8X-8Vi"/>
+                        <segue destination="Nvo-NU-30O" kind="relationship" relationship="viewControllers" id="5W4-w6-ipP"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yp2-B5-QCY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1020" y="35"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="zPg-I7-54T">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NNJ-6r-iMp" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="pmo-TG-Fcz"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AbJ-3j-FDb">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Jrr-hC-bpI" kind="relationship" relationship="rootViewController" id="IOK-PN-uoG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q6n-AB-q3x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2904.8000000000002" y="34.729064039408868"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="8XJ-ZB-Fp6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Nvo-NU-30O" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="YJd-Hk-27B"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="w8C-sc-SQG">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ghp-hU-4GE" kind="relationship" relationship="rootViewController" id="J9w-Fo-8v5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uYS-xy-bv3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1020" y="810"/>
         </scene>
     </scenes>
 </document>

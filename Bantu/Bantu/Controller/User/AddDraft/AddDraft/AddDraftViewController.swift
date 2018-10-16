@@ -39,7 +39,7 @@ class AddDraftViewController: UIViewController {
     
     
     //MARK: Variable Declaration
-    var currentDraft = Post(postId: 0, userId: 0, statusId: 0, timeStamp: "", schoolName: "", about: "", studentNo: 0, teacherNo: 0, address: "", access: "", notes: "", locationAOI: "", locationName: "", locationLocality: "", locationAdminArea: "", locationLatitude: 0, locationLongitude: 0, schoolImages: [], roadImages: [], needs: [])
+    var currentDraft = Post(postId: 0, userId: 0, statusId: 0, timeStamp: "", schoolName: "", about: "", studentNo: 0, teacherNo: 0, address: "", access: "", notes: "", locationAOI: "", locationName: "", locationLocality: "", locationAdminArea: "", locationLatitude: 0, locationLongitude: 0, fullName: "", schoolImages: [], roadImages: [], needs: [])
     
     var isNewDraft: Bool!
     var isPickingSchool: Bool = false
@@ -59,9 +59,12 @@ class AddDraftViewController: UIViewController {
     //MARK: Array Declaration
     var needs: [Needs] = [
         Needs(needsId: 1, needsName: "Air"),
-        Needs(needsId: 2, needsName: "Buku")
+        Needs(needsId: 2, needsName: "Buku"),
+        Needs(needsId: 3, needsName: "Seragam"),
+        Needs(needsId: 4, needsName: "Alat Tulis"),
+        Needs(needsId: 5, needsName: "Al-quran")
     ]
-    var selectedNeeds: [Bool] = []
+    var parallel: [Bool] = []
 
     
     override func viewDidLoad() {
@@ -70,6 +73,15 @@ class AddDraftViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(saveButtonTapped))
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelButtonTapped))
         
+        self.setInitialNeedsParallelArray()
+        
+    }
+    
+    
+    func setInitialNeedsParallelArray(){
+        for _ in 0..<self.needs.count{
+            self.parallel.append(false)
+        }
     }
     
     
@@ -129,6 +141,8 @@ class AddDraftViewController: UIViewController {
         
         // Saving textview & textfield to core data
         let tempPost = DraftEntity(context: LocalServices.context)
+        
+        
         tempPost.schoolName = self.currentDraft.schoolName
         tempPost.aboutPost = self.currentDraft.about
         tempPost.studentNo = Int64(self.currentDraft.studentNo)
@@ -136,15 +150,15 @@ class AddDraftViewController: UIViewController {
         tempPost.accessPost = self.currentDraft.access
         tempPost.addressPost = self.currentDraft.address
         tempPost.notesPost = self.currentDraft.notes
-        
+
         tempPost.locationLatitude = self.currentDraft.locationLatitude
         tempPost.locationLongitude = self.currentDraft.locationLongitude
         tempPost.locationAOI = self.currentDraft.locationAOI
         tempPost.locationName = self.currentDraft.locationName
         tempPost.locationLocality = self.currentDraft.locationLocality
         tempPost.locationAdminArea = self.currentDraft.locationAdminArea
-        
-        
+
+
         // Testing Print
         print(tempPost.schoolName!)
         print(tempPost.aboutPost!)
@@ -160,42 +174,61 @@ class AddDraftViewController: UIViewController {
         print(tempPost.locationLocality!)
         print(tempPost.locationAdminArea!)
         
+        // Saving needs to core data
         
+        var CDataActiveNeeds: [[String:Any]] = []
+        for i in 0..<self.parallel.count {
+            
+            if (self.parallel[i] == true) {
+                var newDict: [String:Any] = [:]
+                newDict["needsId"] = self.needs[i].needsId
+                newDict["needsName"] = self.needs[i].needsName
+                CDataActiveNeeds.append(newDict)
+                
+            }
+        }
+        
+        tempPost.needsPost = CDataActiveNeeds
+        
+        print(CDataActiveNeeds)
+
+
         // Saving image to core data
         var CDataArraySchool = NSMutableArray()
         var CDataArrayRoad = NSMutableArray()
+
+
         
         
         for img in self.currentDraft.schoolImages {
             let data: NSData = NSData(data: img.jpegData(compressionQuality: 1)!)
             CDataArraySchool.add(data)
         }
-        
-        
+
+
         for img in self.currentDraft.roadImages {
             let data: NSData = NSData(data: img.jpegData(compressionQuality: 1)!)
             CDataArrayRoad.add(data)
         }
-        
-        
+
+
         let coreDataObjectSchool = NSKeyedArchiver.archivedData(withRootObject: CDataArraySchool)
         let coreDataObjectRoad = NSKeyedArchiver.archivedData(withRootObject: CDataArrayRoad)
-        
+
         tempPost.schoolImages = coreDataObjectSchool as NSData
         tempPost.roadImages = coreDataObjectRoad as NSData
-        
-        
+
+
         // Saving timestamp to core data
         let currDate = Date()
         let formatter = DateFormatter()
         formatter.dateFormat = "dd-mm-yyyy"
         let dateString = formatter.string(from: currDate)
-        let dateDate = formatter.date(from: dateString)
-        
-        print(dateDate!)
-        
-        tempPost.timeStamp = dateDate as! NSDate
-        
+
+        print(dateString)
+
+        tempPost.timeStamp = dateString
+
         LocalServices.saveContext()
         
     }
@@ -224,6 +257,11 @@ extension AddDraftViewController: UICollectionViewDataSource, UICollectionViewDe
         if (collectionView == self.needCollectionView) {
             let cell = self.needCollectionView.dequeueReusableCell(withReuseIdentifier: "needCell", for: indexPath) as! NeedCollectionCell
             cell.myNeedsLabel.text = self.needs[indexPath.row].needsName
+ 
+            cell.myNeedsLabel.layer.borderColor = UIColor.black.cgColor
+            cell.myNeedsLabel.layer.borderWidth = 1
+            cell.myNeedsLabel.layer.cornerRadius = 3
+
             return cell
         }
         else if (collectionView == self.schoolCollectionView) {
@@ -236,6 +274,7 @@ extension AddDraftViewController: UICollectionViewDataSource, UICollectionViewDe
         cell.setImage(image: self.currentDraft.roadImages[indexPath.row])
         return cell
     }
+    
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -254,6 +293,24 @@ extension AddDraftViewController: UICollectionViewDataSource, UICollectionViewDe
     }
     
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if (collectionView == self.needCollectionView) {
+            
+            let selectedCell = self.needCollectionView.cellForItem(at: indexPath)! as! NeedCollectionCell
+            
+            self.parallel[indexPath.row] = !self.parallel[indexPath.row]
+            
+            if (self.parallel[indexPath.row] == true){
+                selectedCell.myNeedsLabel.backgroundColor = UIColor.cyan
+            }
+            else{
+                selectedCell.myNeedsLabel.backgroundColor = UIColor.lightGray
+            }
+
+        }
+    }
+
+    
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
         var footerIdentifier: String = ""
@@ -271,7 +328,15 @@ extension AddDraftViewController: UICollectionViewDataSource, UICollectionViewDe
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.needCollectionView.frame.width/3-10, height: 30)
+        if (collectionView == self.needCollectionView) {
+            return CGSize(width: self.needCollectionView.frame.width/4-10, height: 20)
+        }
+        else if (collectionView == self.schoolCollectionView) {
+            return CGSize(width: 65, height: 65)
+        }
+        else {
+            return CGSize(width: 65, height: 65)
+        }
     }
     
 }
