@@ -10,11 +10,23 @@ import UIKit
 
 class ProfileViewController: UITableViewController {
 
+    @IBOutlet var profileTableView: UITableView!
+    @IBOutlet weak var fullNameLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.profileTableView.tableFooterView = UIView()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        if (GlobalSession.isLoggedIn == true){
+            self.fullNameLabel.text = GlobalSession.loggedInUser.fullName
+        }
+        else{
+            self.fullNameLabel.text = ""
+        }
+        
         if (GlobalSession.isLoggedIn == false){
             performSegue(withIdentifier: "profileToLog", sender: self)
         }
@@ -41,4 +53,6 @@ class ProfileViewController: UITableViewController {
     @IBAction func cancelButtonClicked(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    
 }

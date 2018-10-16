@@ -354,7 +354,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jvg-Fm-nUd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1724" y="1833"/>
+            <point key="canvasLocation" x="206" y="2650"/>
         </scene>
         <!--Submission-->
         <scene sceneID="DBt-jX-u16">
@@ -421,7 +421,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xom-O0-G9h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="260" y="2553"/>
+            <point key="canvasLocation" x="-663" y="2650"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="Oec-SP-lqv">
@@ -430,7 +430,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="vD7-M3-qCz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
                             <tableViewSection id="nM9-vM-sLn">
                                 <cells>
@@ -441,15 +441,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="103.66666666666667"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jb8-XE-ntZ">
-                                                    <rect key="frame" x="16" y="21" width="42" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kix-0v-Dzb">
-                                                    <rect key="frame" x="16" y="50" width="75" height="30"/>
+                                                    <rect key="frame" x="16" y="64" width="75" height="23"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Edit Profile"/>
                                                 </button>
@@ -457,6 +450,13 @@
                                                     <rect key="frame" x="272" y="16" width="71" height="71"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jb8-XE-ntZ">
+                                                    <rect key="frame" x="16" y="16" width="226" height="35"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="30"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -540,14 +540,15 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="tableView" destination="vD7-M3-qCz" id="kya-t5-ndV"/>
+                        <outlet property="fullNameLabel" destination="Jb8-XE-ntZ" id="Vgq-rt-eOy"/>
+                        <outlet property="profileTableView" destination="vD7-M3-qCz" id="TVn-xx-20p"/>
                         <segue destination="dht-jT-1eB" kind="show" identifier="profileToLog" animates="NO" id="dio-OJ-zNx"/>
                         <segue destination="Thn-kk-TWu" kind="presentation" identifier="profileToAdmin" animates="NO" id="v3R-st-vM0"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kkf-ul-tPe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-663" y="1849"/>
+            <point key="canvasLocation" x="-663.20000000000005" y="1848.768472906404"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Thw-7f-i3a">
