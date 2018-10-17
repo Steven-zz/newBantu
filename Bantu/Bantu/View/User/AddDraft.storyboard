@@ -167,7 +167,8 @@ dikarenakan tidak ada aspal harus berjalan kaki</string>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yh1-DD-BsS">
                                                 <rect key="frame" x="16" y="1080" width="343" height="48"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Dapatkan Lokasi"/>
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
+                                                <state key="normal" title="DAPATKAN LOKASI"/>
                                                 <connections>
                                                     <action selector="tapToShareLocation:" destination="kmj-Hu-fei" eventType="touchUpInside" id="yXJ-W8-t4K"/>
                                                 </connections>

@@ -29,6 +29,9 @@ class EventDetailViewController: UIViewController {
         self.setUp()
     }
     
+    @IBAction func joinButtonTapped(_ sender: Any) {
+        performSegue(withIdentifier: "eventDetailToRegister", sender: self)
+    }
     func setUp(){
         self.eventImg.image = self.currentEvent.img
         self.eventNameLabel.text = self.currentEvent.eventName
