@@ -9,15 +9,16 @@
 import UIKit
 import CoreLocation
 import MapKit
+import ImageSlideshow
 
 class SubmissionDetailViewController: UIViewController {
     
     var currentPost: Post!
     let need: [String] = ["Buku", "Pencil","Baju"]
     
+    @IBOutlet weak var myImageSlide: ImageSlideshow!
     
     @IBOutlet weak var schoolNameLabel: UILabel!
-    @IBOutlet weak var schoolImageView: UIImageView!
     @IBOutlet weak var aboutTextView: UITextView!
     @IBOutlet weak var accessTextView: UITextView!
     @IBOutlet weak var addressTextView: UITextView!
@@ -25,6 +26,8 @@ class SubmissionDetailViewController: UIViewController {
     @IBOutlet weak var myMapView: MKMapView!
     
     @IBOutlet weak var needsCollectionView: UICollectionView!
+    
+    var images: [ImageSource] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +42,33 @@ class SubmissionDetailViewController: UIViewController {
         self.accessTextView.text = self.currentPost.access
         self.addressTextView.text = self.currentPost.address
         self.notesTextView.text = self.currentPost.notes
+        
+        for x in self.currentPost.schoolImages{
+            self.images.append(ImageSource(image: x))
+        }
+        for x in self.currentPost.roadImages{
+            self.images.append(ImageSource(image: x))
+        }
+        
+        self.myImageSlide.slideshowInterval = 0
+        self.myImageSlide.circular = false
+        self.myImageSlide.zoomEnabled = true
+        self.myImageSlide.pageIndicatorPosition = .init(horizontal: .center, vertical: .under)
+        self.myImageSlide.contentScaleMode = UIView.ContentMode.scaleAspectFill
+        
+        let pageControl = UIPageControl()
+        pageControl.currentPageIndicatorTintColor = UIColor.black
+        pageControl.pageIndicatorTintColor = UIColor.lightGray
+        
+        self.myImageSlide.pageIndicator = pageControl
+        self.myImageSlide.setImageInputs(self.images)
+        
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.didTap))
+        self.myImageSlide.addGestureRecognizer(gestureRecognizer)
+    }
+    
+    @objc func didTap() {
+        self.myImageSlide.presentFullScreenController(from: self)
     }
     
     func setUpMap() {
