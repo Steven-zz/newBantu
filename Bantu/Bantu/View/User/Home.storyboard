@@ -30,7 +30,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="homeCell" rowHeight="226" id="m62-NR-4aK" customClass="HomeCell" customModule="Bantu" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="homeCell" rowHeight="226" id="m62-NR-4aK" customClass="HomeCell" customModule="Bantu" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="226"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="m62-NR-4aK" id="J9F-r9-7ym">
@@ -115,6 +115,7 @@
                         <outlet property="eventsTableView" destination="3Rs-zC-vYr" id="mQE-SW-7Qd"/>
                         <outlet property="mySearchBar" destination="M5u-ho-zDr" id="Ssy-KC-TY6"/>
                         <segue destination="tDm-4h-W9X" kind="showDetail" identifier="homeToLog" id="KBM-Bo-YQp"/>
+                        <segue destination="akk-wT-t2V" kind="show" identifier="userEventToDetail" id="oSe-at-ClE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hKZ-CG-pOa" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -254,10 +255,10 @@
             </objects>
             <point key="canvasLocation" x="-95" y="351"/>
         </scene>
-        <!--View Controller-->
+        <!--Event Detail View Controller-->
         <scene sceneID="ZKa-BM-Bzf">
             <objects>
-                <viewController id="akk-wT-t2V" sceneMemberID="viewController">
+                <viewController id="akk-wT-t2V" customClass="EventDetailViewController" customModule="Bantu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hxx-8k-x81">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -266,29 +267,29 @@
                                 <rect key="frame" x="0.0" y="79" width="375" height="220"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SDN 7 Mangkurayat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pFz-QJ-YlY">
-                                <rect key="frame" x="16" y="322" width="151" height="19"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TNT #4 Banten" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pFz-QJ-YlY">
+                                <rect key="frame" x="16" y="322" width="343" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="17 - 19 Agustus 2018" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nYx-Kr-lFn">
-                                <rect key="frame" x="16" y="351" width="114" height="14"/>
+                                <rect key="frame" x="16" y="351" width="343" height="14"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pulau Peucang, Taman Nasional Ujung Kulon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pWz-B6-lHa">
-                                <rect key="frame" x="16" y="380" width="243" height="14"/>
+                                <rect key="frame" x="16" y="375" width="343" height="14"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="650000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2U-Pf-IgL">
-                                <rect key="frame" x="16" y="399" width="41" height="14"/>
+                                <rect key="frame" x="16" y="399" width="343" height="14"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
                                 <nil key="textColor"/>
@@ -301,8 +302,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="About detail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udb-Fq-bX9">
-                                <rect key="frame" x="16" y="449" width="343" height="89"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="About detail" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udb-Fq-bX9">
+                                <rect key="frame" x="16" y="445" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
                                 <nil key="textColor"/>
@@ -330,10 +331,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Q2G-vA-C0F"/>
                     </view>
+                    <connections>
+                        <outlet property="aboutLabel" destination="udb-Fq-bX9" id="jxy-Rb-ugC"/>
+                        <outlet property="eventImg" destination="ZGN-Sp-sSD" id="HYB-97-w4U"/>
+                        <outlet property="eventNameLabel" destination="pFz-QJ-YlY" id="ZHF-Jp-EkG"/>
+                        <outlet property="feeLabel" destination="h2U-Pf-IgL" id="T45-o4-Aab"/>
+                        <outlet property="locationLabel" destination="pWz-B6-lHa" id="sXF-Hj-ve0"/>
+                        <outlet property="timeLabel" destination="nYx-Kr-lFn" id="YcN-1Q-WYI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dOH-Dt-SKd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2510" y="351"/>
+            <point key="canvasLocation" x="1960.8" y="350.98522167487687"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="zaT-Ee-IcM">

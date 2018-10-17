@@ -18,7 +18,7 @@ class HomeViewController: UIViewController {
     var events: [Event] = []
     var filteredEvents: [Event] = []
     
-    var selectedIndex: Int = 0
+    var selectedEvent: Event!
     var searching = false
     
 //    @IBAction func shareButtonTapped(_ sender: Any) {
@@ -123,6 +123,13 @@ class HomeViewController: UIViewController {
     @objc func profileTapped() {
         performSegue(withIdentifier: "homeToLog", sender: nil)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "userEventToDetail"){
+            let destination = segue.destination as! EventDetailViewController
+            destination.currentEvent = self.selectedEvent
+        }
+    }
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
@@ -142,6 +149,16 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             cell.setCell(event: self.events[indexPath.row])
         }
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if (searching == true){
+            self.selectedEvent = self.filteredEvents[indexPath.row]
+        }
+        else{
+            self.selectedEvent = self.events[indexPath.row]
+        }
+        performSegue(withIdentifier: "userEventToDetail", sender: self)
     }
     
 }

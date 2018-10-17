@@ -29,8 +29,6 @@ class SubmissionDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
         self.setUpPost()
         self.setUpMap()
     }
@@ -49,6 +47,32 @@ class SubmissionDetailViewController: UIViewController {
         let region: MKCoordinateRegion = MKCoordinateRegion(center: myLocation, span: span)
         self.myMapView.setRegion(region, animated: true)
         self.myMapView.showsUserLocation = true
+    }
+    
+    @IBAction func acceptButtonClicked(_ sender: Any) {
+        let alert = UIAlertController(title: "Terima Submission", message: nil, preferredStyle: .alert)
+        alert.addTextField()
+        let acceptAction = UIAlertAction(title: "Terima", style: .default) { (UIAlertAction) in
+            PostServices.updatePostStatus(postId: self.currentPost.postId, statusId: 1){}
+            self.navigationController?.popViewController(animated: true)
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        alert.addAction(acceptAction)
+        alert.addAction(cancelAction)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func rejectButtonClicked(_ sender: Any) {
+        let alert = UIAlertController(title: "Tolak Submission", message: nil, preferredStyle: .alert)
+        alert.addTextField()
+        let rejectAction = UIAlertAction(title: "Tolak", style: .default) { (UIAlertAction) in
+            PostServices.updatePostStatus(postId: self.currentPost.postId, statusId: 2){}
+            self.navigationController?.popViewController(animated: true)
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        alert.addAction(rejectAction)
+        alert.addAction(cancelAction)
+        self.present(alert, animated: true, completion: nil)
     }
 }
 

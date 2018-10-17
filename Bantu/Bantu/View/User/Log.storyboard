@@ -431,6 +431,7 @@
                     <navigationItem key="navigationItem" title="Submission" id="V14-hM-9ol"/>
                     <connections>
                         <outlet property="userSubmissionTableView" destination="tOB-vY-Thc" id="S68-o2-EpU"/>
+                        <segue destination="ip2-tV-VHg" kind="show" identifier="userSubmissionToDetail" id="9Tn-IL-voc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xom-O0-G9h" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -722,20 +723,16 @@
             </objects>
             <point key="canvasLocation" x="1921" y="2650"/>
         </scene>
-        <!--Event Detail View Controller-->
+        <!--User Submission Detail View Controller-->
         <scene sceneID="HY7-G1-2oR">
             <objects>
-                <viewController id="ip2-tV-VHg" customClass="EventDetailViewController" customModule="Bantu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ip2-tV-VHg" customClass="UserSubmissionDetailViewController" customModule="Bantu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="arD-Dc-Su2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GKh-Qu-dbW">
-                                <rect key="frame" x="0.0" y="87" width="375" height="152"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1000 Guru Tangerang #TNT4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JOZ-mR-eVh">
-                                <rect key="frame" x="16" y="266" width="217" height="19"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SDN 7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JOZ-mR-eVh">
+                                <rect key="frame" x="16" y="266" width="343" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="16"/>
                                 <nil key="textColor"/>
@@ -756,14 +753,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Akses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ajw-e3-kmq">
-                                <rect key="frame" x="16" y="438" width="36" height="14"/>
+                                <rect key="frame" x="16" y="469" width="36" height="14"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lRv-EQ-COT">
-                                <rect key="frame" x="11" y="315" width="348" height="60"/>
+                                <rect key="frame" x="11" y="308" width="348" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Sekolah Negeri 7 Mangkurayat didirikan pada tahun 2000, sudah berdiri sejak zaman reformasi, membutuhkan bantuan dari segi fasilitas dan tenaga guru</string>
@@ -771,7 +768,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YIJ-hp-jHG">
-                                <rect key="frame" x="11" y="453" width="348" height="43"/>
+                                <rect key="frame" x="11" y="484" width="348" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Mobil hanya bisa maximal 2 kilometer dari sekolah
@@ -780,7 +777,7 @@ dikarenakan tidak ada aspal harus berjalan kaki</string>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0p9-jt-BLp">
-                                <rect key="frame" x="11" y="558" width="348" height="57.666666666666664"/>
+                                <rect key="frame" x="11" y="589" width="348" height="57.666666666666664"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Setelah turun mobil, jalan kaki 2 kilometer sampai ketemu 
@@ -790,65 +787,97 @@ meter sampai ketemu pos satpam.</string>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Alamat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BH8-xv-p4w">
-                                <rect key="frame" x="16" y="497" width="41" height="14"/>
+                                <rect key="frame" x="16" y="528" width="41" height="14"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Catatan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TUp-X0-chq">
-                                <rect key="frame" x="16" y="545" width="45" height="14"/>
+                                <rect key="frame" x="16" y="576" width="45" height="14"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Jl. Muncang Ciminyak Kab. Lebak, Kel. Sajira " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="o6e-Ug-PBL">
-                                <rect key="frame" x="11" y="512" width="348" height="29"/>
+                                <rect key="frame" x="11" y="543" width="348" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Needs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8D-vq-zOe">
-                                <rect key="frame" x="16" y="405" width="56" height="14"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Needs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KVS-OS-Vsq">
-                                <rect key="frame" x="80" y="405" width="56" height="14"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Needs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pg2-gH-M93">
-                                <rect key="frame" x="144" y="405" width="56" height="14"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lokasi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GcH-Yu-eIH">
-                                <rect key="frame" x="16" y="617" width="39" height="14"/>
+                                <rect key="frame" x="16" y="648" width="39" height="14"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ciU-aj-Dqe" customClass="ImageSlideshow" customModule="ImageSlideshow">
+                                <rect key="frame" x="0.0" y="88" width="375" height="170"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="zK3-GE-8Hb">
+                                <rect key="frame" x="16" y="405" width="343" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HjQ-Pc-skV">
+                                    <size key="itemSize" width="65" height="20"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="userSubmissionNeedsCell" id="a6c-4d-fNW" customClass="NeedSubmissionCell" customModule="Bantu" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="65" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="65" height="20"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Znq-uJ-OOb">
+                                                    <rect key="frame" x="0.0" y="0.0" width="65" height="20"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="Znq-uJ-OOb" firstAttribute="width" secondItem="a6c-4d-fNW" secondAttribute="width" id="Lrq-rH-cQd"/>
+                                            <constraint firstItem="Znq-uJ-OOb" firstAttribute="centerY" secondItem="a6c-4d-fNW" secondAttribute="centerY" id="Mwv-jF-RwX"/>
+                                            <constraint firstItem="Znq-uJ-OOb" firstAttribute="centerX" secondItem="a6c-4d-fNW" secondAttribute="centerX" id="bTD-Nu-Mi7"/>
+                                            <constraint firstItem="Znq-uJ-OOb" firstAttribute="height" secondItem="a6c-4d-fNW" secondAttribute="height" id="lWe-yH-zyC"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="needSubmissionLabel" destination="Znq-uJ-OOb" id="882-7w-Ye1"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="ip2-tV-VHg" id="Nol-Jv-z43"/>
+                                    <outlet property="delegate" destination="ip2-tV-VHg" id="L3i-a7-p9Z"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="EQK-vo-bbE"/>
                     </view>
+                    <connections>
+                        <outlet property="aboutLabel" destination="lRv-EQ-COT" id="xN8-eh-hnT"/>
+                        <outlet property="accessLabel" destination="YIJ-hp-jHG" id="2Kw-gh-UAC"/>
+                        <outlet property="addressLabel" destination="o6e-Ug-PBL" id="c4x-1V-Fmh"/>
+                        <outlet property="myImageSlide" destination="ciU-aj-Dqe" id="F3R-Nb-sN1"/>
+                        <outlet property="needsCollectionView" destination="zK3-GE-8Hb" id="MnO-lj-Yrs"/>
+                        <outlet property="notesLabel" destination="0p9-jt-BLp" id="AFh-0a-W5t"/>
+                        <outlet property="schoolNameLabel" destination="JOZ-mR-eVh" id="bdQ-ML-GyA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o10-51-eQt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1503" y="2650"/>
+            <point key="canvasLocation" x="-1503.2" y="2649.7536945812808"/>
         </scene>
     </scenes>
     <resources>

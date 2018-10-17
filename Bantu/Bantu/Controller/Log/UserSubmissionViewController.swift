@@ -12,10 +12,18 @@ class UserSubmissionViewController: UIViewController {
     
     @IBOutlet weak var userSubmissionTableView: UITableView!
     
+    var selectedPost: Post!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "userSubmissionToDetail"){
+            let destination = segue.destination as! UserSubmissionDetailViewController
+            destination.currentSubmission = self.selectedPost
+        }
     }
 
 }
@@ -29,6 +37,11 @@ extension UserSubmissionViewController: UITableViewDelegate, UITableViewDataSour
         let cell = tableView.dequeueReusableCell(withIdentifier: "userSubmissionCell") as! userSubmissionCell
         cell.setCell(post: GlobalSession.submissions[indexPath.row])
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.selectedPost = GlobalSession.submissions[indexPath.row]
+        performSegue(withIdentifier: "userSubmissionToDetail", sender: self)
     }
     
     

@@ -42,6 +42,10 @@ struct EventServices {
                             let requirements = singleEvent["requirements"] as! String
                             let eventNotes = singleEvent["eventNotes"] as! String
                             let contactPerson = singleEvent["contactPerson"] as! String
+                            let locationLocality = singleEvent["locationLocality"] as! String
+                            let locationAdminArea = singleEvent["locationAdminArea"] as! String
+                            let locationLatitude = Double(singleEvent["locationLatitude"] as! String)
+                            let locationLongitude = Double(singleEvent["locationLongitude"] as! String)
                             
                             let imgUrl = singleEvent["imgUrl"] as! String
                             var loadedImage: UIImage!
@@ -52,7 +56,7 @@ struct EventServices {
                                 loadedImage = image
                             }
                             
-                            let newEvent = Event(eventId: eventId!, postId: postId!, timeStamp: timeStamp, eventName: eventName, startDate: startDate, endDate: endDate, description: description, img: loadedImage, fee: fee!, feeInfo: feeInfo, volunteerNo: volunteerNo!, requirements: requirements, eventNotes: eventNotes, contactPerson: contactPerson)
+                            let newEvent = Event(eventId: eventId!, postId: postId!, timeStamp: timeStamp, eventName: eventName, startDate: startDate, endDate: endDate, description: description, img: loadedImage, fee: fee!, feeInfo: feeInfo, volunteerNo: volunteerNo!, requirements: requirements, eventNotes: eventNotes, contactPerson: contactPerson, locationLocality: locationLocality, locationAdminArea: locationAdminArea, locationLatitude: locationLatitude!, locationLongitude: locationLongitude!)
                             
                             tempEvents.append(newEvent)
                         }

@@ -33,7 +33,6 @@ class postCell: UITableViewCell {
         self.fullNameLabel.text = self.currentPost.fullName
         self.timeStampLabel.text = self.currentPost.timeStamp.beautifyDate()
         
-        
         self.needsCollectionView.reloadData()
     }
 }
