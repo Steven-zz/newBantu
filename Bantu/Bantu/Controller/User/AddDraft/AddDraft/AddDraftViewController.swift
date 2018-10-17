@@ -38,6 +38,10 @@ class AddDraftViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     
     
+    //MARK: Outlet for uibutton
+    @IBOutlet weak var getLocationButton: UIButton!
+    
+    
     //MARK: Variable Declaration
     var currentDraft = Post(postId: 0, userId: 0, statusId: 0, timeStamp: "", schoolName: "", about: "", studentNo: 0, teacherNo: 0, address: "", access: "", notes: "", locationAOI: "", locationName: "", locationLocality: "", locationAdminArea: "", locationLatitude: 0, locationLongitude: 0, fullName: "", statusName: "", schoolImages: [], roadImages: [], needs: [])
     
@@ -65,10 +69,11 @@ class AddDraftViewController: UIViewController {
         super.viewDidLoad()
         
         self.schoolNameTextField.setIndentLeftPadding()
-    //        self.aboutTextField.setIndentTextView()
-    //        self.addressTextView.setIndentTextView()
-    //        self.accessTextView.setIndentTextView()
-    //        self.notesTextView.setIndentTextView()
+        self.studentNoTextField.setIndentLeftPadding()
+        self.teacherNo.setIndentLeftPadding()
+        
+        self.getLocationButton.buttonDesign()
+
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(saveButtonTapped))
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelButtonTapped))
@@ -77,7 +82,6 @@ class AddDraftViewController: UIViewController {
     }
     
     
-   
     
     
     func setInitialNeedsParallelArray(){
