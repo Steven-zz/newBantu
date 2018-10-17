@@ -17,12 +17,18 @@ class EventDetailViewController: UIViewController {
     @IBOutlet weak var feeLabel: UILabel!
     @IBOutlet weak var aboutLabel: UILabel!
     
+    @IBOutlet weak var joinButton: UIButton!
+    
     var currentEvent: Event!
     
+    @IBAction func seeMoreTapped(_ sender: Any) {
+        performSegue(withIdentifier: "EventDetailToEventDetailMore", sender: self)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.joinButton.buttonDesign()
 
-        // Do any additional setup after loading the view.
+       
         self.setUp()
     }
     
