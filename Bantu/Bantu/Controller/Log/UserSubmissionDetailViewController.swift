@@ -8,6 +8,8 @@
 
 import UIKit
 import ImageSlideshow
+import CoreLocation
+import MapKit
 
 class UserSubmissionDetailViewController: UIViewController {
     
@@ -18,7 +20,10 @@ class UserSubmissionDetailViewController: UIViewController {
     @IBOutlet weak var accessLabel: UITextView!
     @IBOutlet weak var addressLabel: UITextView!
     @IBOutlet weak var notesLabel: UITextView!
+
     
+    @IBOutlet weak var mySubmissionMapView: MKMapView!
+    @IBOutlet weak var bukaMapButton: UIButton!
     @IBOutlet weak var myImageSlide: ImageSlideshow!
     var images: [ImageSource] = []
     
@@ -26,7 +31,33 @@ class UserSubmissionDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.bukaMapButton.buttonDesign()
+        
         self.setUp()
+        self.setLocationOnMap(userLocation: CLLocation(latitude: self.currentSubmission.locationLatitude, longitude: self.currentSubmission.locationLongitude))
+        
+    }
+    
+    func setLocationOnMap(userLocation: CLLocation) {
+        let span: MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+        let myLocation: CLLocationCoordinate2D = CLLocationCoordinate2DMake(userLocation.coordinate.latitude, userLocation.coordinate.longitude)
+        let region: MKCoordinateRegion = MKCoordinateRegion(center: myLocation, span: span)
+        self.mySubmissionMapView.setRegion(region, animated: true)
+        self.mySubmissionMapView.showsUserLocation = true
+    }
+    
+    @IBAction func bukaMapsTapped(_ sender: Any) {
+        let url = "http://maps.apple.com/maps?saddr=&daddr=\(self.currentSubmission.locationLatitude),\(self.currentSubmission.locationLongitude)"
+            if UIApplication.shared.canOpenURL(NSURL(string: url)! as URL) {
+            UIApplication.shared.openURL(URL(string:url)!)
+        }
+                
+        else {
+            let alert = UIAlertController(title: "Error", message: "Please Install Apple Maps", preferredStyle: UIAlertController.Style.alert)
+            let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
+            alert.addAction(okButton)
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     func setUp(){
