@@ -16,6 +16,7 @@ class UserSubmissionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.userSubmissionTableView.tableFooterView = UIView()
         
     }
     
