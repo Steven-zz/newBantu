@@ -46,7 +46,7 @@ struct PostServices {
                             let locationAdminArea = singlePost["locationAdminArea"] as! String
                             let locationLatitude = Double(singlePost["locationLatitude"] as! String)
                             let locationLongitude = Double(singlePost["locationLongitude"] as! String)
-                            let fullName = singlePost["schoolName"] as! String
+                            let fullName = singlePost["fullName"] as! String
                             let statusName = singlePost["statusName"] as! String
                             
                             var tempNeeds: [Needs] = []

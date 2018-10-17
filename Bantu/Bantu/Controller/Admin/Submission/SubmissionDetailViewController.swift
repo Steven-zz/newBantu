@@ -16,6 +16,7 @@ class SubmissionDetailViewController: UIViewController {
     var currentPost: Post!
     let need: [String] = ["Buku", "Pencil","Baju"]
     
+    @IBOutlet weak var openMapsButton: UIButton!
     @IBOutlet weak var myImageSlide: ImageSlideshow!
     
     @IBOutlet weak var schoolNameLabel: UILabel!
@@ -31,10 +32,25 @@ class SubmissionDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.openMapsButton.buttonDesign()
         
         self.setUpPost()
         self.setUpMap()
     }
+    
+    @IBAction func openMapsTapped(_ sender: Any) {
+        let url = "http://maps.apple.com/maps?saddr=&daddr=\(self.currentPost.locationLatitude),\(self.currentPost.locationLongitude)"
+            if UIApplication.shared.canOpenURL(NSURL(string: url)! as URL) {
+            UIApplication.shared.openURL(URL(string:url)!)
+        }
+        else {
+                let alert = UIAlertController(title: "Error", message: "Please Install Apple Maps", preferredStyle: UIAlertController.Style.alert)
+            let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
+            alert.addAction(okButton)
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
     
     func setUpPost(){
         self.schoolNameLabel.text = self.currentPost.schoolName
