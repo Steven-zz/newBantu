@@ -193,4 +193,34 @@ struct PostServices {
         }
         dataTask.resume()
     }
+    
+    static func updatePostStatus(postId: Int, statusId: Int, onComplete: @escaping () -> ()){
+        let newUrlString = GlobalSession.rootUrl + "/postsStatus/\(postId)"
+        let url = URL(string: newUrlString)
+        
+        var urlRequest = URLRequest.init(url: url!)
+        urlRequest.httpMethod = "PUT"
+        
+        urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        let jsonInput = ["statusId":statusId]
+        let data = try? JSONSerialization.data(withJSONObject: jsonInput, options: [])
+        
+        urlRequest.httpBody = data
+        let dataTask = GlobalSession.session.dataTask(with: urlRequest) { (data, response, error) in
+            if let unwrappedError = error {
+                print("Error = \(unwrappedError.localizedDescription)")
+            } else if let unwrappedData = data {
+                do {
+                    let json = try JSONSerialization.jsonObject(with: unwrappedData, options: [])
+                    if let dictionary = json as? [String:Any] {
+                        print(dictionary)
+                        print("Update successful")
+                    }
+                } catch {
+                }
+            }
+        }
+        dataTask.resume()
+    }
 }
