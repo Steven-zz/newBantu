@@ -125,8 +125,7 @@ class DraftDetailViewController: UIViewController {
         
     }
 
-    
-    @IBAction func hideKeyboard(_ sender: Any) {
+        @IBAction func hideKeyboard(_ sender: Any) {
         draftDetailScrollView.endEditing(true)
     }
     
