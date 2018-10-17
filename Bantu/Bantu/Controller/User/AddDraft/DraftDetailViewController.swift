@@ -40,6 +40,11 @@ class DraftDetailViewController: UIViewController {
     @IBOutlet weak var myMapView: MKMapView!
     
     
+    //MARK: Outlet for uibutton
+    @IBOutlet weak var postButton: UIButton!
+    @IBOutlet weak var openMapsButton: UIButton!
+    
+    
     //MARK: Variable Declaration
     var isNewDraft: Bool!
     var isCurrentlyEditing: Bool = false
@@ -56,6 +61,13 @@ class DraftDetailViewController: UIViewController {
 
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Edit", style: .done, target: self, action: #selector(editButtonTapped))
         setInitialLoadFromCoreData()
+        
+        
+        self.schoolNameTextField.setIndentLeftPadding()
+        
+        self.postButton.buttonDesign()
+        self.openMapsButton.buttonDesign()
+        
         
         self.fetchAllNeedsFromCoreData()
     }

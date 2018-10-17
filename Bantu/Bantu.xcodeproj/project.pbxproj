@@ -18,6 +18,7 @@
 		29D1CD7121747B7000282B5A /* NeedsEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D1CD6D21747B7000282B5A /* NeedsEntity+CoreDataProperties.swift */; };
 		29D1CD7321747E9E00282B5A /* ImageCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D1CD7221747E9E00282B5A /* ImageCollectionCell.swift */; };
 		29D1CD752174820600282B5A /* NeedCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D1CD742174820600282B5A /* NeedCollectionCell.swift */; };
+		29D611F52176E5F1004B0E18 /* PaddingOnly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D611F42176E5F1004B0E18 /* PaddingOnly.swift */; };
 		2F157C192176DD6200D8A80D /* EventDetailMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F157C182176DD6200D8A80D /* EventDetailMoreViewController.swift */; };
 		2F6B620A216F639900BDC9A7 /* DefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6B6209216F639900BDC9A7 /* DefaultViewController.swift */; };
 		2F6FC31F21660912004609AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6FC31E21660912004609AC /* AppDelegate.swift */; };
@@ -79,6 +80,7 @@
 		29D1CD6D21747B7000282B5A /* NeedsEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NeedsEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		29D1CD7221747E9E00282B5A /* ImageCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionCell.swift; sourceTree = "<group>"; };
 		29D1CD742174820600282B5A /* NeedCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeedCollectionCell.swift; sourceTree = "<group>"; };
+		29D611F42176E5F1004B0E18 /* PaddingOnly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingOnly.swift; sourceTree = "<group>"; };
 		2F157C182176DD6200D8A80D /* EventDetailMoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailMoreViewController.swift; sourceTree = "<group>"; };
 		2F6B6209216F639900BDC9A7 /* DefaultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultViewController.swift; sourceTree = "<group>"; };
 		2F6FC31B21660912004609AC /* Bantu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bantu.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -240,6 +242,7 @@
 				2FA5E343216DD83100EB375C /* UITextField.swift */,
 				8529E00E216F005500879A98 /* SHA1Extension.swift */,
 				85EAB41C21763B9800F0F6FD /* StringExtension.swift */,
+				29D611F42176E5F1004B0E18 /* PaddingOnly.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -489,6 +492,7 @@
 				2FA5E338216DA01400EB375C /* AddDraftViewController.swift in Sources */,
 				85EAB4192175F77000F0F6FD /* userSubmissionCell.swift in Sources */,
 				2F719D9821708D61009C83A4 /* SubmissionViewController.swift in Sources */,
+				29D611F52176E5F1004B0E18 /* PaddingOnly.swift in Sources */,
 				2FA5E344216DD83100EB375C /* UITextField.swift in Sources */,
 				296BE554216F5CD7006A6B88 /* LocalModel.xcdatamodeld in Sources */,
 				85EAB41F21768BE500F0F6FD /* UserSubmissionDetailViewController.swift in Sources */,
@@ -680,7 +684,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TZ3HWHN35P;
+				DEVELOPMENT_TEAM = B989SMZ93Y;
 				INFOPLIST_FILE = Bantu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -699,7 +703,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TZ3HWHN35P;
+				DEVELOPMENT_TEAM = B989SMZ93Y;
 				INFOPLIST_FILE = Bantu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
