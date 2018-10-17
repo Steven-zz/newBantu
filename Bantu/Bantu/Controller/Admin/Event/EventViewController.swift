@@ -10,14 +10,40 @@ import UIKit
 
 class EventViewController: UIViewController {
 
+    @IBOutlet weak var eventsTableView: UITableView!
+    
+    var events: [Event] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.getEvents()
+    }
+    
+    func getEvents(){
+        EventServices.getEvents(){ (events) in
+            self.events = events
+            DispatchQueue.main.async {
+                self.eventsTableView.reloadData()
+            }
+        }
     }
     
     @IBAction func addEventTapped(_ sender: Any) {
         performSegue(withIdentifier: "eventToAddEvent", sender: self)
     }
-    
+}
 
+extension EventViewController: UITableViewDelegate, UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.events.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "adminHomeCell") as! HomeCell
+        cell.setCell(event: self.events[indexPath.row])
+        return cell
+    }
+    
+    
 }
