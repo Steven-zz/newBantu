@@ -312,11 +312,14 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="JlH-zc-kWK">
-                                <rect key="frame" x="16" y="523" width="343" height="104"/>
+                                <rect key="frame" x="17" y="523" width="343" height="104"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="akk-wT-t2V" id="0Sg-Sk-0Xk"/>
+                                </connections>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tnu-wx-PTI">
-                                <rect key="frame" x="16" y="643" width="343" height="48"/>
+                                <rect key="frame" x="199" y="643" width="160" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
                                 <state key="normal" title="GABUNG"/>
@@ -357,17 +360,28 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BcR-Ht-ZCn">
+                                <rect key="frame" x="16" y="643" width="160" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
+                                <state key="normal" title="BUKA MAPS"/>
+                                <connections>
+                                    <action selector="bukaMapsTapped:" destination="akk-wT-t2V" eventType="touchUpInside" id="9Ry-jH-ucR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Q2G-vA-C0F"/>
                     </view>
                     <connections>
+                        <outlet property="bukaMapsButton" destination="BcR-Ht-ZCn" id="8Ks-bt-TId"/>
                         <outlet property="descriptionTextView" destination="9mx-FP-tVP" id="ynP-dz-WH4"/>
                         <outlet property="eventImg" destination="ZGN-Sp-sSD" id="HYB-97-w4U"/>
                         <outlet property="eventNameLabel" destination="pFz-QJ-YlY" id="ZHF-Jp-EkG"/>
                         <outlet property="feeLabel" destination="h2U-Pf-IgL" id="T45-o4-Aab"/>
                         <outlet property="joinButton" destination="Tnu-wx-PTI" id="ste-He-3q8"/>
                         <outlet property="locationLabel" destination="pWz-B6-lHa" id="sXF-Hj-ve0"/>
+                        <outlet property="mapsView" destination="JlH-zc-kWK" id="Zqn-91-nfk"/>
                         <outlet property="timeLabel" destination="nYx-Kr-lFn" id="YcN-1Q-WYI"/>
                         <segue destination="kj4-1N-qY0" kind="show" identifier="EventDetailToEventDetailMore" id="WxK-7F-zco"/>
                         <segue destination="fG3-uN-z42" kind="show" identifier="eventDetailToRegister" id="fdx-Oa-iKf"/>

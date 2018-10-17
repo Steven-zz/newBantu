@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import CoreLocation
+import MapKit
 
 class EventDetailViewController: UIViewController {
 
@@ -19,15 +21,43 @@ class EventDetailViewController: UIViewController {
     
     @IBOutlet weak var joinButton: UIButton!
     
+    @IBOutlet weak var bukaMapsButton: UIButton!
+    
+    @IBOutlet weak var mapsView: MKMapView!
     var currentEvent: Event!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.joinButton.buttonDesign()
-
+        self.bukaMapsButton.buttonDesign()
+        self.setLocationOnMap(userLocation: CLLocation(latitude: self.currentEvent.locationLatitude, longitude: self.currentEvent.locationLongitude))
        
         self.setUp()
     }
+    
+    @IBAction func bukaMapsTapped(_ sender: Any) {
+        let url = "http://maps.apple.com/maps?saddr=&daddr=\(self.currentEvent.locationLatitude),\(self.currentEvent.locationLongitude)"
+        if UIApplication.shared.canOpenURL(NSURL(string: url)! as URL) {
+            UIApplication.shared.openURL(URL(string:url)!)
+        }
+            
+        else {
+            let alert = UIAlertController(title: "Error", message: "Please Install Apple Maps", preferredStyle: UIAlertController.Style.alert)
+            let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
+            alert.addAction(okButton)
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+    }
+    
+    func setLocationOnMap(userLocation: CLLocation) {
+        let span: MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+        let myLocation: CLLocationCoordinate2D = CLLocationCoordinate2DMake(userLocation.coordinate.latitude, userLocation.coordinate.longitude)
+        let region: MKCoordinateRegion = MKCoordinateRegion(center: myLocation, span: span)
+        self.mapsView.setRegion(region, animated: true)
+        self.mapsView.showsUserLocation = true
+    }
+    
     
     @IBAction func joinButtonTapped(_ sender: Any) {
         performSegue(withIdentifier: "eventDetailToRegister", sender: self)
