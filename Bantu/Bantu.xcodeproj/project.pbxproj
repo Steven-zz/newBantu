@@ -46,6 +46,8 @@
 		2FA5E346216DDCDC00EB375C /* RegisteringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA5E345216DDCDC00EB375C /* RegisteringViewController.swift */; };
 		2FA5E348216DE0C800EB375C /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA5E347216DE0C800EB375C /* LogInViewController.swift */; };
 		2FBA047D2175C98F00C54860 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBA047C2175C98F00C54860 /* ProfileViewController.swift */; };
+		2FD612D22176E4A00080B816 /* AdminEventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD612D12176E4A00080B816 /* AdminEventDetailViewController.swift */; };
+		2FD612D42176E4DA0080B816 /* AdminEventDetailMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD612D32176E4DA0080B816 /* AdminEventDetailMoreViewController.swift */; };
 		2FE953C9216B377800258F32 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE953C8216B377800258F32 /* HomeViewController.swift */; };
 		2FE953CC216B45CA00258F32 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE953CB216B45CA00258F32 /* HomeCell.swift */; };
 		2FE953CE216B46B400258F32 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE953CD216B46B400258F32 /* Event.swift */; };
@@ -110,6 +112,8 @@
 		2FA5E345216DDCDC00EB375C /* RegisteringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteringViewController.swift; sourceTree = "<group>"; };
 		2FA5E347216DE0C800EB375C /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		2FBA047C2175C98F00C54860 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		2FD612D12176E4A00080B816 /* AdminEventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminEventDetailViewController.swift; sourceTree = "<group>"; };
+		2FD612D32176E4DA0080B816 /* AdminEventDetailMoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminEventDetailMoreViewController.swift; sourceTree = "<group>"; };
 		2FE953C8216B377800258F32 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2FE953CB216B45CA00258F32 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		2FE953CD216B46B400258F32 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -220,6 +224,8 @@
 				2F719DA02170A215009C83A4 /* EventViewController.swift */,
 				2F719DA42170A249009C83A4 /* AddEventViewController.swift */,
 				85EAB4202176909500F0F6FD /* EventDetailViewController.swift */,
+				2FD612D12176E4A00080B816 /* AdminEventDetailViewController.swift */,
+				2FD612D32176E4DA0080B816 /* AdminEventDetailMoreViewController.swift */,
 			);
 			path = Event;
 			sourceTree = "<group>";
@@ -526,10 +532,12 @@
 				2FA5E348216DE0C800EB375C /* LogInViewController.swift in Sources */,
 				29A008F8217621EE00F71413 /* PaddingTextView.swift in Sources */,
 				2F719D9A217091E0009C83A4 /* NeedSubmissionCell.swift in Sources */,
+				2FD612D42176E4DA0080B816 /* AdminEventDetailMoreViewController.swift in Sources */,
 				853D1C57217059550071A60E /* Needs.swift in Sources */,
 				2FBA047D2175C98F00C54860 /* ProfileViewController.swift in Sources */,
 				2FE953C9216B377800258F32 /* HomeViewController.swift in Sources */,
 				29D1CD7021747B7000282B5A /* NeedsEntity+CoreDataClass.swift in Sources */,
+				2FD612D22176E4A00080B816 /* AdminEventDetailViewController.swift in Sources */,
 				2FE953CE216B46B400258F32 /* Event.swift in Sources */,
 				29D1CD7121747B7000282B5A /* NeedsEntity+CoreDataProperties.swift in Sources */,
 				2F6B620A216F639900BDC9A7 /* DefaultViewController.swift in Sources */,

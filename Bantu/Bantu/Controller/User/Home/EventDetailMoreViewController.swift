@@ -11,18 +11,25 @@ import UIKit
 class EventDetailMoreViewController: UIViewController {
 
     @IBOutlet weak var aboutTextView: UITextView!
-    
     @IBOutlet weak var includeTextView: UITextView!
     @IBOutlet weak var requirementTextView: UITextView!
-    @IBOutlet weak var applicationPeriodTextView: UITextView!
-    
     @IBOutlet weak var contactPerson: UITextView!
     @IBOutlet weak var additionalInfoTextView: UITextView!
+    
+    var currentEvent: Event!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.setUp()
     }
     
-
+    func setUp(){
+        self.aboutTextView.text = self.currentEvent.description
+        self.includeTextView.text = self.currentEvent.feeInfo
+        self.requirementTextView.text = self.currentEvent.requirements
+        self.contactPerson.text = self.currentEvent.contactPerson
+        self.additionalInfoTextView.text = self.currentEvent.eventNotes
+    }
 
 }
