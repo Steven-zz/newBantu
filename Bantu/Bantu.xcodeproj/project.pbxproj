@@ -18,6 +18,7 @@
 		29D1CD7121747B7000282B5A /* NeedsEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D1CD6D21747B7000282B5A /* NeedsEntity+CoreDataProperties.swift */; };
 		29D1CD7321747E9E00282B5A /* ImageCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D1CD7221747E9E00282B5A /* ImageCollectionCell.swift */; };
 		29D1CD752174820600282B5A /* NeedCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D1CD742174820600282B5A /* NeedCollectionCell.swift */; };
+		2F157C192176DD6200D8A80D /* EventDetailMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F157C182176DD6200D8A80D /* EventDetailMoreViewController.swift */; };
 		2F6B620A216F639900BDC9A7 /* DefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6B6209216F639900BDC9A7 /* DefaultViewController.swift */; };
 		2F6FC31F21660912004609AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6FC31E21660912004609AC /* AppDelegate.swift */; };
 		2F6FC32421660913004609AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F6FC32221660913004609AC /* Main.storyboard */; };
@@ -78,6 +79,7 @@
 		29D1CD6D21747B7000282B5A /* NeedsEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NeedsEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		29D1CD7221747E9E00282B5A /* ImageCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionCell.swift; sourceTree = "<group>"; };
 		29D1CD742174820600282B5A /* NeedCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeedCollectionCell.swift; sourceTree = "<group>"; };
+		2F157C182176DD6200D8A80D /* EventDetailMoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailMoreViewController.swift; sourceTree = "<group>"; };
 		2F6B6209216F639900BDC9A7 /* DefaultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultViewController.swift; sourceTree = "<group>"; };
 		2F6FC31B21660912004609AC /* Bantu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bantu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F6FC31E21660912004609AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -268,6 +270,7 @@
 				2FE953C8216B377800258F32 /* HomeViewController.swift */,
 				2FA5E328216B593A00EB375C /* RegisterViewController.swift */,
 				2FBA047C2175C98F00C54860 /* ProfileViewController.swift */,
+				2F157C182176DD6200D8A80D /* EventDetailMoreViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -495,6 +498,7 @@
 				2FA5E329216B593A00EB375C /* RegisterViewController.swift in Sources */,
 				2FA5E342216DCA0D00EB375C /* LogViewController.swift in Sources */,
 				2F719DA52170A249009C83A4 /* AddEventViewController.swift in Sources */,
+				2F157C192176DD6200D8A80D /* EventDetailMoreViewController.swift in Sources */,
 				85EAB4132175C58800F0F6FD /* postCell.swift in Sources */,
 				8529E00D216EFEC600879A98 /* User.swift in Sources */,
 				29D1CD752174820600282B5A /* NeedCollectionCell.swift in Sources */,
@@ -676,7 +680,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B989SMZ93Y;
+				DEVELOPMENT_TEAM = TZ3HWHN35P;
 				INFOPLIST_FILE = Bantu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -695,7 +699,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B989SMZ93Y;
+				DEVELOPMENT_TEAM = TZ3HWHN35P;
 				INFOPLIST_FILE = Bantu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
