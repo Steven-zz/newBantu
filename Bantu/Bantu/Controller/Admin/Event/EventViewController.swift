@@ -14,6 +14,8 @@ class EventViewController: UIViewController {
     
     var events: [Event] = []
     
+    var selectedEvent: Event!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,6 +34,13 @@ class EventViewController: UIViewController {
     @IBAction func addEventTapped(_ sender: Any) {
         performSegue(withIdentifier: "eventToAddEvent", sender: self)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "adminEventToDetail"){
+            let destination = segue.destination as! AdminEventDetailViewController
+            
+        }
+    }
 }
 
 extension EventViewController: UITableViewDelegate, UITableViewDataSource{
@@ -43,6 +52,11 @@ extension EventViewController: UITableViewDelegate, UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "adminHomeCell") as! HomeCell
         cell.setCell(event: self.events[indexPath.row])
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.selectedEvent = self.events[indexPath.row]
+        performSegue(withIdentifier: "adminEventToDetail", sender: self)
     }
     
     
