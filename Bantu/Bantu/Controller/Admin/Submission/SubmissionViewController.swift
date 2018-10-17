@@ -18,6 +18,8 @@ class SubmissionViewController: UIViewController {
         super.viewDidLoad()
 
         self.getSubmissions()
+        
+        self.submissionsTable.tableFooterView = UIView()
     }
     
     func getSubmissions(){

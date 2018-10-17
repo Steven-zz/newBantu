@@ -10,21 +10,30 @@ import UIKit
 
 class AdminEventDetailMoreViewController: UIViewController {
 
+    @IBOutlet weak var aboutTextView: UITextView!
+    @IBOutlet weak var includeTextView: UITextView!
+    @IBOutlet weak var requirementTextView: UITextView!
+    @IBOutlet weak var contactPerson: UITextView!
+    @IBOutlet weak var additionalInfoTextView: UITextView!
+    
+    var currentEvent: Event!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.setUp()
+    }
+    
+    func setUp(){
+        self.aboutTextView.text = self.currentEvent.description
+        self.includeTextView.text = self.currentEvent.feeInfo
+        self.requirementTextView.text = self.currentEvent.requirements
+        self.contactPerson.text = self.currentEvent.contactPerson
+        self.additionalInfoTextView.text = self.currentEvent.eventNotes
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }

@@ -18,6 +18,7 @@ class AddEventViewController: UIViewController {
     @IBOutlet weak var endDateTextField: UITextField!
     @IBOutlet weak var volunteerTextField: UITextField!
     
+    @IBOutlet weak var postEventButton: UIButton!
     let datePicker = UIDatePicker()
     
     var acceptedPosts: [Post] = []
@@ -31,6 +32,8 @@ class AddEventViewController: UIViewController {
         
         createSchoolPicker()
         createSchoolToolbar()
+        
+        self.postEventButton.buttonDesign()
 
     
         self.acceptedPosts = GlobalSession.submissions.filter({$0.statusName == "Accepted"})

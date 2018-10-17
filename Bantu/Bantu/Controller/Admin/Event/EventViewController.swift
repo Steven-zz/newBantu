@@ -38,7 +38,7 @@ class EventViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "adminEventToDetail"){
             let destination = segue.destination as! AdminEventDetailViewController
-            
+            destination.currentEvent = self.selectedEvent
         }
     }
 }
