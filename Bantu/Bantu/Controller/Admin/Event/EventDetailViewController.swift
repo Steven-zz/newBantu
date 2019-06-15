@@ -60,7 +60,10 @@ class EventDetailViewController: UIViewController {
     
     
     @IBAction func joinButtonTapped(_ sender: Any) {
-        performSegue(withIdentifier: "eventDetailToRegister", sender: self)
+//        performSegue(withIdentifier: "eventDetailToRegister", sender: self)
+        guard let url = URL(string: "whatsapp://send?phone=+62811829991&text=hello") else { return }
+        
+        UIApplication.shared.openURL(url)
     }
     func setUp(){
         self.eventImg.image = self.currentEvent.img

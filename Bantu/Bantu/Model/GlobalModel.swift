@@ -10,7 +10,7 @@ import Foundation
 
 struct GlobalSession{
     static let session = URLSession(configuration: .default)
-    static var rootUrl = "https://bantuapp.online/public"
+    static var rootUrl = "https://bantu.website/public"
     static var loggedInUser: User!
     static var isLoggedIn: Bool = false
     
